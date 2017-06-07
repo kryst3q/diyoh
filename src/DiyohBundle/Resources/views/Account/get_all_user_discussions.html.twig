@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Account:getAllUserDiscussions{% endblock %}
+
+{% block body %}
+
+    {% for discussion in discussions %}
+        <p>{{ discussion.title }}</p>
+    {% endfor %}
+    
+{% endblock %}

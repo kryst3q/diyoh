@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Account:getAllUserFavouriteProjects{% endblock %}
+
+{% block body %}
+
+    {% for project in app.user.favouriteProjects %}
+    
+        <p>{{ project.name }}</p>
+        
+    {% endfor %}
+    
+{% endblock %}

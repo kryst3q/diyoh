@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Account:getAllUserVoices{% endblock %}
+
+{% block body %}
+
+    {% for voice in voices %}
+        <p>{{ voice.text }}</p>
+    {% endfor %}
+    
+{% endblock %}

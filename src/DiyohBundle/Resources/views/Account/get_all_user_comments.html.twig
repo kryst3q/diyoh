@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Account:getAllUserComments{% endblock %}
+
+{% block body %}
+
+    {% for comment in comments %}
+        <p>{{ comment.text }}</p>
+    {% endfor %}
+    
+{% endblock %}
