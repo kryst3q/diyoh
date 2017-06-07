@@ -1,0 +1,123 @@
+<?php
+
+namespace DiyohBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CategoryTree
+ *
+ * @ORM\Table(name="category_tree")
+ * @ORM\Entity(repositoryClass="DiyohBundle\Repository\CategoryTreeRepository")
+ */
+class CategoryTree
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * @var int
+     * @ORM\ManyToOne(targetEntity="Category")
+     * @ORM\JoinColumn(name="depth1", referencedColumnName="id")
+     */
+    private $depth1;
+
+    /**
+     * @var int
+     * @ORM\ManyToOne(targetEntity="Category")
+     * @ORM\JoinColumn(name="depth2", referencedColumnName="id")
+     */
+    private $depth2;
+
+    /**
+     * @var int
+     * @ORM\ManyToOne(targetEntity="Category")
+     * @ORM\JoinColumn(name="depth3", referencedColumnName="id")
+     */
+    private $depth3;
+
+    /**
+     * Set depth1
+     *
+     * @param integer $depth1
+     * @return CategoryTree
+     */
+    public function setDepth1($depth1)
+    {
+        $this->depth1 = $depth1;
+
+        return $this;
+    }
+
+    /**
+     * Get depth1
+     *
+     * @return integer 
+     */
+    public function getDepth1()
+    {
+        return $this->depth1;
+    }
+
+    /**
+     * Set depth2
+     *
+     * @param integer $depth2
+     * @return CategoryTree
+     */
+    public function setDepth2($depth2)
+    {
+        $this->depth2 = $depth2;
+
+        return $this;
+    }
+
+    /**
+     * Get depth2
+     *
+     * @return integer 
+     */
+    public function getDepth2()
+    {
+        return $this->depth2;
+    }
+
+    /**
+     * Set depth3
+     *
+     * @param integer $depth3
+     * @return CategoryTree
+     */
+    public function setDepth3($depth3)
+    {
+        $this->depth3 = $depth3;
+
+        return $this;
+    }
+
+    /**
+     * Get depth3
+     *
+     * @return integer 
+     */
+    public function getDepth3()
+    {
+        return $this->depth3;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

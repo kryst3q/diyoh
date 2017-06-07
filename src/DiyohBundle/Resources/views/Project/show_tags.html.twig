@@ -3,5 +3,9 @@
 {% block title %}DiyohBundle:Project:showTags{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Project:showTags page</h1>
+
+    {% for tag in tags %}
+        <a href="{{ url("diyoh_project_showtaglinks",{'id':tag.id}) }}"><span class="badge">{{ tag.name }}</span>
+    {% endfor %}
+        
 {% endblock %}

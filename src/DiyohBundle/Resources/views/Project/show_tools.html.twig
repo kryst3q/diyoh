@@ -3,5 +3,9 @@
 {% block title %}DiyohBundle:Project:showTools{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Project:showTools page</h1>
+
+    {% for tool in tools %}
+        <a href="{{ url("diyoh_project_showtool",{'id':tool.id}) }}"><p>{{ tool.name }}</p></a>
+    {% endfor %}
+    
 {% endblock %}

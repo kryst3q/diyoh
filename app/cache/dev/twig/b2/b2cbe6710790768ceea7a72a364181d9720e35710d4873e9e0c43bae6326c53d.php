@@ -15,8 +15,8 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_54dab9c488199668e7ae8c40323e873efb002674f3027d90636e3ef8989d738c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_54dab9c488199668e7ae8c40323e873efb002674f3027d90636e3ef8989d738c->enter($__internal_54dab9c488199668e7ae8c40323e873efb002674f3027d90636e3ef8989d738c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
+        $__internal_77c442000961c6c674574acbe9bff1f924669c15c9dc6fa51a6ec25bda8636af = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_77c442000961c6c674574acbe9bff1f924669c15c9dc6fa51a6ec25bda8636af->enter($__internal_77c442000961c6c674574acbe9bff1f924669c15c9dc6fa51a6ec25bda8636af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
 
         // line 1
         echo "<nav class=\"navbar navbar-default\">
@@ -35,13 +35,28 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
         echo "\">diyoh</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
             <ul class=\"nav navbar-nav\">
-                <li><a href=\"#\">Categories</a></li>
-                <li><a href=\"#\">Projects</a></li>
-                <li><a href=\"#\">Tags</a></li>
-                <li><a href=\"#\">Tools</a></li>
+                <li><a href=\"";
+        // line 16
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showmaincategories");
+        echo "\">Categories</a></li>
+                <li><a href=\"";
+        // line 17
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showprojects");
+        echo "\">Projects</a></li>
+                <li><a href=\"";
+        // line 18
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showtags");
+        echo "\">Tags</a></li>
+                <li><a href=\"";
+        // line 19
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showtools");
+        echo "\">Tools</a></li>
+                <li><a href=\"";
+        // line 20
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showmaterials");
+        echo "\">Materials</a></li>
             </ul>
             <form class=\"navbar-form navbar-left\">
                 <div class=\"form-group\">
@@ -51,7 +66,10 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
             </form>
             <ul class=\"nav navbar-nav navbar-right\">
                 <li class=\"dropdown\">
-                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-user\"></span> Account <span class=\"caret\"></span></a>
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-user\"></span> ";
+        // line 30
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "html", null, true);
+        echo " <span class=\"caret\"></span></a>
                     <ul class=\"dropdown-menu\">
                         <li><a href=\"";
         // line 32
@@ -106,7 +124,7 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
 </nav>
 ";
         
-        $__internal_54dab9c488199668e7ae8c40323e873efb002674f3027d90636e3ef8989d738c->leave($__internal_54dab9c488199668e7ae8c40323e873efb002674f3027d90636e3ef8989d738c_prof);
+        $__internal_77c442000961c6c674574acbe9bff1f924669c15c9dc6fa51a6ec25bda8636af->leave($__internal_77c442000961c6c674574acbe9bff1f924669c15c9dc6fa51a6ec25bda8636af_prof);
 
     }
 
@@ -122,7 +140,7 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
 
     public function getDebugInfo()
     {
-        return array (  101 => 48,  95 => 45,  91 => 44,  86 => 42,  81 => 40,  76 => 38,  71 => 36,  66 => 34,  62 => 33,  58 => 32,  34 => 11,  22 => 1,);
+        return array (  119 => 48,  113 => 45,  109 => 44,  104 => 42,  99 => 40,  94 => 38,  89 => 36,  84 => 34,  80 => 33,  76 => 32,  71 => 30,  58 => 20,  54 => 19,  50 => 18,  46 => 17,  42 => 16,  34 => 11,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -148,13 +166,13 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
             <a class=\"navbar-brand\" href=\"{{ url(\"diyoh_default_index\") }}\">diyoh</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
             <ul class=\"nav navbar-nav\">
-                <li><a href=\"#\">Categories</a></li>
-                <li><a href=\"#\">Projects</a></li>
-                <li><a href=\"#\">Tags</a></li>
-                <li><a href=\"#\">Tools</a></li>
+                <li><a href=\"{{ url(\"diyoh_project_showmaincategories\") }}\">Categories</a></li>
+                <li><a href=\"{{ url(\"diyoh_project_showprojects\") }}\">Projects</a></li>
+                <li><a href=\"{{ url(\"diyoh_project_showtags\") }}\">Tags</a></li>
+                <li><a href=\"{{ url(\"diyoh_project_showtools\") }}\">Tools</a></li>
+                <li><a href=\"{{ url(\"diyoh_project_showmaterials\") }}\">Materials</a></li>
             </ul>
             <form class=\"navbar-form navbar-left\">
                 <div class=\"form-group\">
@@ -164,7 +182,7 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
             </form>
             <ul class=\"nav navbar-nav navbar-right\">
                 <li class=\"dropdown\">
-                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-user\"></span> Account <span class=\"caret\"></span></a>
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-user\"></span> {{ app.user }} <span class=\"caret\"></span></a>
                     <ul class=\"dropdown-menu\">
                         <li><a href=\"{{ url(\"fos_user_profile_show\") }}\">Profile</a></li>
                         <li><a href=\"{{ url(\"fos_user_profile_edit\") }}\">Edit profile</a></li>

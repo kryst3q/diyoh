@@ -1,0 +1,21 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Project:showTags{% endblock %}
+
+{% block body %}
+
+    <p><span class="badge">{{ tag.name }}</span></p>
+    
+    <hr>
+    
+    {% for tool in tag.tools %}
+        <a href="{{ url("diyoh_project_showtool",{'id':tool.id}) }}">{{ tool.name }}</a>
+    {% endfor %}
+    
+    <hr>
+    
+    {% for project in tag.projects %}
+        <p><a href="{{ url("diyoh_project_showproject",{'id':project.id}) }}">{{ project.name }}</a></p>
+    {% endfor %}
+        
+{% endblock %}

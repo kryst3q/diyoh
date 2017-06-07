@@ -176,19 +176,43 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showMainCategoriesAction',  '_route' => 'diyoh_project_showmaincategories',);
         }
 
-        // diyoh_project_showtools
-        if ($pathinfo === '/tools') {
-            return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showToolsAction',  '_route' => 'diyoh_project_showtools',);
+        if (0 === strpos($pathinfo, '/tool')) {
+            // diyoh_project_showtools
+            if ($pathinfo === '/tools') {
+                return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showToolsAction',  '_route' => 'diyoh_project_showtools',);
+            }
+
+            // diyoh_project_showtool
+            if (preg_match('#^/tool/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showtool')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showToolAction',));
+            }
+
         }
 
-        // diyoh_project_showmaterials
-        if ($pathinfo === '/materials') {
-            return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showMaterialsAction',  '_route' => 'diyoh_project_showmaterials',);
+        if (0 === strpos($pathinfo, '/material')) {
+            // diyoh_project_showmaterials
+            if ($pathinfo === '/materials') {
+                return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showMaterialsAction',  '_route' => 'diyoh_project_showmaterials',);
+            }
+
+            // diyoh_project_showmaterial
+            if (preg_match('#^/material/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showmaterial')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showMaterialAction',));
+            }
+
         }
 
-        // diyoh_project_showtags
-        if ($pathinfo === '/tags') {
-            return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showTagsAction',  '_route' => 'diyoh_project_showtags',);
+        if (0 === strpos($pathinfo, '/tag')) {
+            // diyoh_project_showtags
+            if ($pathinfo === '/tags') {
+                return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showTagsAction',  '_route' => 'diyoh_project_showtags',);
+            }
+
+            // diyoh_project_showtaglinks
+            if (preg_match('#^/tag/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showtaglinks')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showTagLinksAction',));
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/project')) {
@@ -203,6 +227,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
         }
+
+        // diyoh_project_showinfoaboutotheruser
+        if (0 === strpos($pathinfo, '/user') && preg_match('#^/user/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                goto not_diyoh_project_showinfoaboutotheruser;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showinfoaboutotheruser')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showInfoAboutOtherUser',));
+        }
+        not_diyoh_project_showinfoaboutotheruser:
 
         if (0 === strpos($pathinfo, '/log')) {
             if (0 === strpos($pathinfo, '/login')) {

@@ -1,0 +1,27 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Project:showTools{% endblock %}
+
+{% block body %}
+    
+    <p>{{ user.id }}</p>
+    <p>{{ user.username }}</p>
+    
+    {% for project in user.projects %}
+        
+        <a href="{{ url("diyoh_project_showproject",{'id':project.id}) }}"><p>{{ project.name }}</p></a>
+        
+    {% endfor %}
+    
+    <hr>
+    
+    {% if is_granted('ROLE_USER') %}
+        Send a message:
+        <div>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
+    {% endif %}
+    
+{% endblock %}

@@ -41,6 +41,20 @@ class Category
      */
     private $tools;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Category", mappedBy="overriding")
+     */
+    private $subordinate;
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="Category", inversedBy="subordinate")
+     * @ORM\JoinTable(name="category_tree",
+     *      joinColumns={@ORM\JoinColumn(name="overriding", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="subordinate", referencedColumnName="id")}
+     *      )
+     */
+    private $overriding;
+    
     public function __construct() {
         
         $this->projects = new ArrayCollection();
@@ -145,5 +159,71 @@ class Category
     public function getTools()
     {
         return $this->tools;
+    }
+
+    /**
+     * Add subordinate
+     *
+     * @param \DiyohBundle\Entity\Category $subordinate
+     * @return Category
+     */
+    public function addSubordinate(\DiyohBundle\Entity\Category $subordinate)
+    {
+        $this->subordinate[] = $subordinate;
+
+        return $this;
+    }
+
+    /**
+     * Remove subordinate
+     *
+     * @param \DiyohBundle\Entity\Category $subordinate
+     */
+    public function removeSubordinate(\DiyohBundle\Entity\Category $subordinate)
+    {
+        $this->subordinate->removeElement($subordinate);
+    }
+
+    /**
+     * Get subordinate
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSubordinate()
+    {
+        return $this->subordinate;
+    }
+
+    /**
+     * Add overriding
+     *
+     * @param \DiyohBundle\Entity\Category $overriding
+     * @return Category
+     */
+    public function addOverriding(\DiyohBundle\Entity\Category $overriding)
+    {
+        $this->overriding[] = $overriding;
+
+        return $this;
+    }
+
+    /**
+     * Remove overriding
+     *
+     * @param \DiyohBundle\Entity\Category $overriding
+     */
+    public function removeOverriding(\DiyohBundle\Entity\Category $overriding)
+    {
+        $this->overriding->removeElement($overriding);
+    }
+
+    /**
+     * Get overriding
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getOverriding()
+    {
+        return $this->overriding;
     }
 }

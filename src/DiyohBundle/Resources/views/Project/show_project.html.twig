@@ -3,5 +3,34 @@
 {% block title %}DiyohBundle:Project:showProject{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Project:showProject page</h1>
+
+    <p>{{ project.id }}</p>
+    <p>{{ project.name }}</p>
+    <p>{{ project.authorId }}</p>
+    <p>{{ project.description }}</p>
+    
+    <hr>
+    
+    {% for tag in project.tags %}
+        
+        <a href="{{ url("diyoh_project_showtaglinks",{'id':tag.id}) }}"><span class="badge">{{ tag.name }}</span>
+            
+    {% endfor %}
+    
+    <hr>
+    
+    {% for tool in project.tools %}
+        
+        <a href="{{ url("diyoh_project_showtool",{'id':tool.id}) }}"><p>{{ tool.name }}</p></a>
+        
+    {% endfor %}
+    
+    <hr>
+    
+    {% for material in project.materials %}
+        
+        <a href="{{ url("diyoh_project_showmaterial",{'id':material.id}) }}"><p>{{ material.name }}</p></a>
+        
+    {% endfor %}
+    
 {% endblock %}

@@ -3,5 +3,9 @@
 {% block title %}DiyohBundle:Project:showMaterials{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Project:showMaterials page</h1>
+
+    {% for material in materials %}
+        <a href="{{ url("diyoh_project_showmaterial",{'id':material.id}) }}"><p>{{ material.name }}</p></a>
+    {% endfor %}
+    
 {% endblock %}
