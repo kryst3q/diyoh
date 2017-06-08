@@ -22,32 +22,32 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5->enter($__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_project.html.twig"));
+        $__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d->enter($__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_project.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5->leave($__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5_prof);
+        $__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d->leave($__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826->enter($__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc->enter($__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Project:showProject";
         
-        $__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826->leave($__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826_prof);
+        $__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc->leave($__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec->enter($__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6->enter($__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -139,9 +139,20 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 35
         echo "    
+    ";
+        // line 36
+        if (($this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "imagesPaths", array()) != null)) {
+            // line 37
+            echo "        <img src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("images/" . $this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "imagesPaths", array()))), "html", null, true);
+            echo "\">
+    ";
+        }
+        // line 39
+        echo "    
 ";
         
-        $__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec->leave($__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec_prof);
+        $__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6->leave($__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6_prof);
 
     }
 
@@ -157,7 +168,7 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
 
     public function getDebugInfo()
     {
-        return array (  141 => 35,  130 => 32,  127 => 31,  123 => 30,  118 => 27,  107 => 24,  104 => 23,  100 => 22,  95 => 19,  84 => 16,  81 => 15,  77 => 14,  70 => 10,  64 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  152 => 39,  146 => 37,  144 => 36,  141 => 35,  130 => 32,  127 => 31,  123 => 30,  118 => 27,  107 => 24,  104 => 23,  100 => 22,  95 => 19,  84 => 16,  81 => 15,  77 => 14,  70 => 10,  64 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -204,6 +215,10 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
         <a href=\"{{ url(\"diyoh_project_showmaterial\",{'id':material.id}) }}\"><p>{{ material.name }}</p></a>
         
     {% endfor %}
+    
+    {% if project.imagesPaths != null %}
+        <img src=\"{{ asset('images/' ~ project.imagesPaths) }}\">
+    {% endif %}
     
 {% endblock %}
 ", "DiyohBundle:Project:show_project.html.twig", "/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Project/show_project.html.twig");

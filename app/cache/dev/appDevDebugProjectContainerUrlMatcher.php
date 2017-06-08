@@ -170,8 +170,14 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 // diyoh_account_addnewproject
                 if ($pathinfo === '/account/projects/new') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_diyoh_account_addnewproject;
+                    }
+
                     return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::addNewProject',  '_route' => 'diyoh_account_addnewproject',);
                 }
+                not_diyoh_account_addnewproject:
 
             }
 

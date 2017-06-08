@@ -182,20 +182,21 @@ class AccountController extends Controller
                 ))
                 ->add('instruction','text')
                 ->add('imagesPaths', FileType::class, array(
-                    'label' => 'Upload images'
+                    'label' => 'Upload images',
+                    'multiple' => true,
                 ))
-                ->add('schemesPaths', FileType::class, array(
-                    'label' => 'Upload schemes'
-                ))
-                ->add('moviesPaths', FileType::class, array(
-                    'label' => 'Upload video'
-                ))
-                ->add('cadPath', FileType::class, array(
-                    'label' => 'Upload CAD file'
-                ))
-                ->add('printablePartsPaths', FileType::class, array(
-                    'label' => 'Upload 3D printer file'
-                ))
+//                ->add('moviesPaths', FileType::class, array(
+//                    'label' => 'Upload video'
+//                ))
+//                ->add('schemesPaths', FileType::class, array(
+//                    'label' => 'Upload schemes'
+//                ))
+//                ->add('cadPath', FileType::class, array(
+//                    'label' => 'Upload CAD file'
+//                ))
+//                ->add('printablePartsPaths', FileType::class, array(
+//                    'label' => 'Upload 3D printer file'
+//                ))
                 ->add('Add','submit')
                 ->getForm();
         
@@ -205,6 +206,17 @@ class AccountController extends Controller
             
             $project = $form->getData();
             
+            $file = $project->getImagesPaths();
+            var_dump($file); die();
+            $fileName = $this->get('app.file_uploader')->upload($file);
+            $project->setImagesPaths($fileName);
+            $project->setAuthorId($this->getUser());
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($project);
+            $em->flush();
+            
+            return $this->redirectToRoute('diyoh_account_getalluserprojects');
         }
         
         return $this->render('DiyohBundle:Account:add_new_project.html.twig', array('form' => $form->createView()));

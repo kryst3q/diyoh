@@ -33,4 +33,10 @@
         
     {% endfor %}
     
+    {% if project.imagesPaths != null %}
+        
+        <img src="{{ asset('images/' ~ project.imagesPaths) }}">
+        
+    {% endif %}
+    
 {% endblock %}
