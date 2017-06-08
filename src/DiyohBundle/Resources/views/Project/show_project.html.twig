@@ -35,7 +35,11 @@
     
     {% if project.imagesPaths != null %}
         
-        <img src="{{ asset('images/' ~ project.imagesPaths) }}">
+        {% for imagePath in project.imagesPaths %}
+        
+            <img src="{{ asset('images/' ~ imagePath) }}">
+        
+        {% endfor %}
         
     {% endif %}
     

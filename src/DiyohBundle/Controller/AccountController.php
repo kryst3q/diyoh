@@ -207,7 +207,7 @@ class AccountController extends Controller
             $project = $form->getData();
             
             $file = $project->getImagesPaths();
-            var_dump($file); die();
+
             $fileName = $this->get('app.file_uploader')->upload($file);
             $project->setImagesPaths($fileName);
             $project->setAuthorId($this->getUser());

@@ -59,7 +59,7 @@ class Project
     /**
      * @var string
      *
-     * @ORM\Column(name="images_paths", type="string", length=255, nullable=true)
+     * @ORM\Column(name="images_paths", type="array", nullable=true)
      */
     private $imagesPaths;
 

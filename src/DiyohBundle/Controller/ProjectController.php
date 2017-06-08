@@ -126,7 +126,7 @@ class ProjectController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $projects = $em->getRepository("DiyohBundle:Project")->findAll();
-        
+
         return $this->render('DiyohBundle:Project:show_projects.html.twig', array(
             'projects' => $projects
         ));
@@ -139,6 +139,8 @@ class ProjectController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $project = $em->getRepository("DiyohBundle:Project")->findById($id);
+        
+        
         
         return $this->render('DiyohBundle:Project:show_project.html.twig', array(
             'project' => $project[0]

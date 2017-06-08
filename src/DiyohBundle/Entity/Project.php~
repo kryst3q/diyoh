@@ -59,7 +59,7 @@ class Project
     /**
      * @var string
      *
-     * @ORM\Column(name="images_paths", type="string", length=255, nullable=true)
+     * @ORM\Column(name="images_paths", type="array", nullable=true)
      */
     private $imagesPaths;
 
@@ -120,10 +120,10 @@ class Project
     private $materials;
     
     /**
-     * @ORM\ManyToMany(targetEntity="User", inversedBy="favourite_projects")
+     * @ORM\ManyToMany(targetEntity="User", inversedBy="favouriteProjects")
      * @ORM\JoinTable(name="favprojects_users")
      */
-    private $user;
+    private $users;
     
     public function __construct() {
         
@@ -131,7 +131,7 @@ class Project
         $this->categories = new ArrayCollection();
         $this->tools = new ArrayCollection();
         $this->materials = new ArrayCollection();
-        $this->user = new ArrayCollection();
+        $this->users = new ArrayCollection();
         
     }
 
@@ -506,5 +506,38 @@ class Project
     public function getInstruction()
     {
         return $this->instruction;
+    }
+
+    /**
+     * Add user
+     *
+     * @param \DiyohBundle\Entity\User $user
+     * @return Project
+     */
+    public function addUser(\DiyohBundle\Entity\User $user)
+    {
+        $this->users[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \DiyohBundle\Entity\User $user
+     */
+    public function removeUser(\DiyohBundle\Entity\User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * Get users
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getUsers()
+    {
+        return $this->users;
     }
 }

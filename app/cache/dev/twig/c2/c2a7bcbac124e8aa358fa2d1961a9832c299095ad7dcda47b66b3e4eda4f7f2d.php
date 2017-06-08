@@ -22,32 +22,32 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d->enter($__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_project.html.twig"));
+        $__internal_330375ec5105c7b63dc4e3a19b6f2236fe131c3eb48a1cd5a57ee0be20e21852 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_330375ec5105c7b63dc4e3a19b6f2236fe131c3eb48a1cd5a57ee0be20e21852->enter($__internal_330375ec5105c7b63dc4e3a19b6f2236fe131c3eb48a1cd5a57ee0be20e21852_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_project.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d->leave($__internal_27d7b4f0c57d5f82351a08bad22a854a2191827865517abbba5735340137b00d_prof);
+        $__internal_330375ec5105c7b63dc4e3a19b6f2236fe131c3eb48a1cd5a57ee0be20e21852->leave($__internal_330375ec5105c7b63dc4e3a19b6f2236fe131c3eb48a1cd5a57ee0be20e21852_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc->enter($__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_635d49a6fd0db5ac4cbf7f856de367b3edcb9082d663ae9d1b485e78cf6206e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_635d49a6fd0db5ac4cbf7f856de367b3edcb9082d663ae9d1b485e78cf6206e1->enter($__internal_635d49a6fd0db5ac4cbf7f856de367b3edcb9082d663ae9d1b485e78cf6206e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Project:showProject";
         
-        $__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc->leave($__internal_78541b4895278e92fb204d6e7545310fda736e871b1bda1eaac71e01a1b297dc_prof);
+        $__internal_635d49a6fd0db5ac4cbf7f856de367b3edcb9082d663ae9d1b485e78cf6206e1->leave($__internal_635d49a6fd0db5ac4cbf7f856de367b3edcb9082d663ae9d1b485e78cf6206e1_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6->enter($__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6a934f0828064db5094547c8b40a9304b7474c6141cba27afe4557f989e3786e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6a934f0828064db5094547c8b40a9304b7474c6141cba27afe4557f989e3786e->enter($__internal_6a934f0828064db5094547c8b40a9304b7474c6141cba27afe4557f989e3786e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -143,16 +143,33 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
         // line 36
         if (($this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "imagesPaths", array()) != null)) {
             // line 37
-            echo "        <img src=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("images/" . $this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "imagesPaths", array()))), "html", null, true);
-            echo "\">
+            echo "        
+        ";
+            // line 38
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "imagesPaths", array()));
+            foreach ($context['_seq'] as $context["_key"] => $context["imagePath"]) {
+                // line 39
+                echo "        
+            <img src=\"";
+                // line 40
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("images/" . $context["imagePath"])), "html", null, true);
+                echo "\">
+        
+        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['imagePath'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 43
+            echo "        
     ";
         }
-        // line 39
+        // line 45
         echo "    
 ";
         
-        $__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6->leave($__internal_14477ed90e91dd4c500d28a18d20599e5d0dd0339ba20bc02a55699203eeeac6_prof);
+        $__internal_6a934f0828064db5094547c8b40a9304b7474c6141cba27afe4557f989e3786e->leave($__internal_6a934f0828064db5094547c8b40a9304b7474c6141cba27afe4557f989e3786e_prof);
 
     }
 
@@ -168,7 +185,7 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
 
     public function getDebugInfo()
     {
-        return array (  152 => 39,  146 => 37,  144 => 36,  141 => 35,  130 => 32,  127 => 31,  123 => 30,  118 => 27,  107 => 24,  104 => 23,  100 => 22,  95 => 19,  84 => 16,  81 => 15,  77 => 14,  70 => 10,  64 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  169 => 45,  165 => 43,  156 => 40,  153 => 39,  149 => 38,  146 => 37,  144 => 36,  141 => 35,  130 => 32,  127 => 31,  123 => 30,  118 => 27,  107 => 24,  104 => 23,  100 => 22,  95 => 19,  84 => 16,  81 => 15,  77 => 14,  70 => 10,  64 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -217,7 +234,13 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
     {% endfor %}
     
     {% if project.imagesPaths != null %}
-        <img src=\"{{ asset('images/' ~ project.imagesPaths) }}\">
+        
+        {% for imagePath in project.imagesPaths %}
+        
+            <img src=\"{{ asset('images/' ~ imagePath) }}\">
+        
+        {% endfor %}
+        
     {% endif %}
     
 {% endblock %}
