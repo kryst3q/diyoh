@@ -3,5 +3,10 @@
 {% block title %}DiyohBundle:Project:showMainCategories{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Project:showMainCategories page</h1>
+
+    {{ dump(categories) }}
+    
+    {% for el in categories.overriding %}
+        {{dump(el)}}
+    {%endfor%}
 {% endblock %}

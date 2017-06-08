@@ -6,7 +6,7 @@
 
     <p>{{ project.id }}</p>
     <p>{{ project.name }}</p>
-    <p>{{ project.authorId }}</p>
+    <a href="{{ url("diyoh_project_showinfoaboutotheruser",{'id':project.authorId.id}) }}"><p>{{ project.authorId }}</p></a>
     <p>{{ project.description }}</p>
     
     <hr>

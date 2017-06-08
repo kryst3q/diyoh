@@ -59,6 +59,9 @@ class Category
         
         $this->projects = new ArrayCollection();
         $this->tools = new ArrayCollection();
+        $this->overriding = new ArrayCollection();
+        $this->subordinate = new ArrayCollection();
+
         
     }
     

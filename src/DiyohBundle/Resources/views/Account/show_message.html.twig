@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Account:showMessagesMenu{% endblock %}
+
+{% block body %}
+
+    <p>{{ message.title }}</p>
+    <p>{{ message.text }}</p>
+    <p>{{ message.sendDatetime.date }}</p>
+    <p>{{ message.authorId.username }}</p>
+    <p>{{ message.recipientId.username }}</p>
+
+{% endblock %}

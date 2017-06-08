@@ -106,31 +106,28 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/account')) {
-            if (0 === strpos($pathinfo, '/account/messages')) {
-                // diyoh_account_showmessagesmenu
-                if ($pathinfo === '/account/messages') {
-                    return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::showMessagesMenuAction',  '_route' => 'diyoh_account_showmessagesmenu',);
-                }
-
-                // diyoh_account_newmessage
-                if ($pathinfo === '/account/messages/new') {
-                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                        goto not_diyoh_account_newmessage;
+            if (0 === strpos($pathinfo, '/account/message')) {
+                if (0 === strpos($pathinfo, '/account/messages')) {
+                    // diyoh_account_showmessagesmenu
+                    if ($pathinfo === '/account/messages') {
+                        return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::showMessagesMenuAction',  '_route' => 'diyoh_account_showmessagesmenu',);
                     }
 
-                    return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::newMessageAction',  '_route' => 'diyoh_account_newmessage',);
-                }
-                not_diyoh_account_newmessage:
+                    // diyoh_account_getreceivedmessages
+                    if ($pathinfo === '/account/messages/received') {
+                        return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::getReceivedMessagesAction',  '_route' => 'diyoh_account_getreceivedmessages',);
+                    }
 
-                // diyoh_account_getreceivedmessages
-                if ($pathinfo === '/account/messages/received') {
-                    return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::getReceivedMessagesAction',  '_route' => 'diyoh_account_getreceivedmessages',);
+                    // diyoh_account_getsentmessages
+                    if ($pathinfo === '/account/messages/sent') {
+                        return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::getSentMessagesAction',  '_route' => 'diyoh_account_getsentmessages',);
+                    }
+
                 }
 
-                // diyoh_account_getsentmessages
-                if ($pathinfo === '/account/messages/sent') {
-                    return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::getSentMessagesAction',  '_route' => 'diyoh_account_getsentmessages',);
+                // diyoh_account_showmessage
+                if (preg_match('#^/account/message/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_account_showmessage')), array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::showMessageAction',));
                 }
 
             }

@@ -22,45 +22,6 @@ class AccountController extends Controller
     }
 
     /**
-     * @Route("/messages/new")
-     * @Method({"GET","POST"})
-     */
-    public function newMessageAction(Request $request)
-    {
-        $message = new Message();
-        $form = $this->createFormBuilder($message)
-                ->add("recipientId","integer",array(
-                    'label' => 'Recipient '
-                ))
-                ->add("title","text",array(
-                    'label' => 'Title '
-                ))
-                ->add("text","text",array(
-                    'label' => 'Text  '
-                ))
-                ->add("sendDatetime","datetime")
-                ->add("Send","submit")
-                ->getForm();
-        
-        $form->handleRequest($request);
-        
-        if ($form->isSubmitted()) {
-            
-            $message->setAuthorId($this->getUser());
-            $message->setSendDatetime(date('Y-m-d h:i:s'));
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($message);
-            $em->flush();
-            
-            $urlToRedirect = $this->url("diyoh_account_getsentmessages");
-            
-            return $this->redirectToRoute($urlToRedirect);
-        }
-        
-        return $this->render('DiyohBundle:Account:new_message.html.twig', array('form' => $form->createView()));
-    }
-
-    /**
      * @Route("/messages/received")
      */
     public function getReceivedMessagesAction()
@@ -84,6 +45,28 @@ class AccountController extends Controller
         $allReceivedMessages = $repository->findByAuthorId($user->getId());
         
         return $this->render('DiyohBundle:Account:get_sent_messages.html.twig', array('messages' => $allReceivedMessages));
+    }
+    
+    /**
+     * @Route("/message/{id}")
+     */
+    public function showMessageAction($id) {
+        
+        $em = $this->getDoctrine()->getManager();
+        $message = $em->getRepository("DiyohBundle:Message")->findById($id);
+        
+        if (!$message[0]->getOpen()) {
+            
+            $message[0]->setOpen(1);
+            $em->persist($message[0]);
+            $em->flush();
+            
+        }
+        
+        return $this->render('DiyohBundle:Account:show_message.html.twig', array(
+            'message' => $message[0]
+        ));
+        
     }
 
     /**

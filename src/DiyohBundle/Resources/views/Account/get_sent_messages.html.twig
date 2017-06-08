@@ -7,7 +7,7 @@
     {% include '/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Account/messagebar.html.twig' %}
     
     {% for message in messages %}
-        <p>{{ message.title }}</p>
+        <a href="{{ url("diyoh_account_showmessage",{'id':message.id}) }}"><p>{{ message.title }}</p></a>
     {% endfor %}
     
 {% endblock %}

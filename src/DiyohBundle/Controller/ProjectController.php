@@ -15,10 +15,14 @@ class ProjectController extends Controller
      */
     public function showMainCategoriesAction()
     {
+//        $categories = $this->getDoctrine()->getRepository('DiyohBundle:Category')->findBy([
+//           'overriding' => $this->getDoctrine()->getRepository('DiyohBundle:Category')->findOneById(1)
+//        ]);
         
+        $categories = $this->getDoctrine()->getRepository('DiyohBundle:Category')->findOneById(1);
         
         return $this->render('DiyohBundle:Project:show_main_categories.html.twig', array(
-            // ...
+            'categories' => $categories
         ));
     }
 

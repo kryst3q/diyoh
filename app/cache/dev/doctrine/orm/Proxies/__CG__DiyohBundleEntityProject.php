@@ -64,10 +64,10 @@ class Project extends \DiyohBundle\Entity\Project implements \Doctrine\ORM\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'id', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'authorId', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'name', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'description', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'rating', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'instruction', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'imagesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'schemesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'moviesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'cadPath', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'printablepartsPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'tags', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'categories', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'tools', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'materials', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'user');
+            return array('__isInitialized__', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'id', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'authorId', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'name', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'description', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'rating', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'instruction', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'imagesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'schemesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'moviesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'cadPath', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'printablepartsPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'tags', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'categories', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'tools', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'materials', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'users');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'id', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'authorId', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'name', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'description', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'rating', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'instruction', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'imagesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'schemesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'moviesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'cadPath', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'printablepartsPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'tags', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'categories', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'tools', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'materials', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'user');
+        return array('__isInitialized__', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'id', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'authorId', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'name', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'description', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'rating', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'instruction', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'imagesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'schemesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'moviesPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'cadPath', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'printablepartsPaths', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'tags', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'categories', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'tools', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'materials', '' . "\0" . 'DiyohBundle\\Entity\\Project' . "\0" . 'users');
     }
 
     /**
@@ -565,12 +565,12 @@ class Project extends \DiyohBundle\Entity\Project implements \Doctrine\ORM\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getUser()
+    public function getUsers()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUser', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsers', array());
 
-        return parent::getUser();
+        return parent::getUsers();
     }
 
 }

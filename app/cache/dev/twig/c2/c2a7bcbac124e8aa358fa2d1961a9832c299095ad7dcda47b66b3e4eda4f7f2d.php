@@ -22,32 +22,32 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_39ddfc617d51f43f33274a0375c264bfe359e6ab371c51a6c97f91f11488f337 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_39ddfc617d51f43f33274a0375c264bfe359e6ab371c51a6c97f91f11488f337->enter($__internal_39ddfc617d51f43f33274a0375c264bfe359e6ab371c51a6c97f91f11488f337_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_project.html.twig"));
+        $__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5->enter($__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_project.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_39ddfc617d51f43f33274a0375c264bfe359e6ab371c51a6c97f91f11488f337->leave($__internal_39ddfc617d51f43f33274a0375c264bfe359e6ab371c51a6c97f91f11488f337_prof);
+        $__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5->leave($__internal_c6384a8b9167410705bfc573ef9df8c8dc257fa5f2214a678fd2fddae4b4feb5_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_096efba976c13ba86f105b51d6fae6533ed26a94397d8f33be928da4330e4ae6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_096efba976c13ba86f105b51d6fae6533ed26a94397d8f33be928da4330e4ae6->enter($__internal_096efba976c13ba86f105b51d6fae6533ed26a94397d8f33be928da4330e4ae6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826->enter($__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Project:showProject";
         
-        $__internal_096efba976c13ba86f105b51d6fae6533ed26a94397d8f33be928da4330e4ae6->leave($__internal_096efba976c13ba86f105b51d6fae6533ed26a94397d8f33be928da4330e4ae6_prof);
+        $__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826->leave($__internal_8554fce2dc4e4f9b699fdf10c2aa7001be4ee7e6632977db374799a328110826_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_71ec19f4a7e15cc352497d1d138d7bd645543b2352c4649dcc9408c09d20bae6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_71ec19f4a7e15cc352497d1d138d7bd645543b2352c4649dcc9408c09d20bae6->enter($__internal_71ec19f4a7e15cc352497d1d138d7bd645543b2352c4649dcc9408c09d20bae6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec->enter($__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -59,10 +59,12 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
         // line 8
         echo twig_escape_filter($this->env, $this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "name", array()), "html", null, true);
         echo "</p>
-    <p>";
+    <a href=\"";
         // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showinfoaboutotheruser", array("id" => $this->getAttribute($this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "authorId", array()), "id", array()))), "html", null, true);
+        echo "\"><p>";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "authorId", array()), "html", null, true);
-        echo "</p>
+        echo "</p></a>
     <p>";
         // line 10
         echo twig_escape_filter($this->env, $this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "description", array()), "html", null, true);
@@ -139,7 +141,7 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
         echo "    
 ";
         
-        $__internal_71ec19f4a7e15cc352497d1d138d7bd645543b2352c4649dcc9408c09d20bae6->leave($__internal_71ec19f4a7e15cc352497d1d138d7bd645543b2352c4649dcc9408c09d20bae6_prof);
+        $__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec->leave($__internal_e63f7c2ee683fb82591b86c84dc6cc8d1d24408d15d1ca29a2838d36baaedaec_prof);
 
     }
 
@@ -155,7 +157,7 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
 
     public function getDebugInfo()
     {
-        return array (  139 => 35,  128 => 32,  125 => 31,  121 => 30,  116 => 27,  105 => 24,  102 => 23,  98 => 22,  93 => 19,  82 => 16,  79 => 15,  75 => 14,  68 => 10,  64 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  141 => 35,  130 => 32,  127 => 31,  123 => 30,  118 => 27,  107 => 24,  104 => 23,  100 => 22,  95 => 19,  84 => 16,  81 => 15,  77 => 14,  70 => 10,  64 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -176,7 +178,7 @@ class __TwigTemplate_d485a2c8a55c7a7e3b6a89191fa3ccc8701ef1569a6490b62462504b662
 
     <p>{{ project.id }}</p>
     <p>{{ project.name }}</p>
-    <p>{{ project.authorId }}</p>
+    <a href=\"{{ url(\"diyoh_project_showinfoaboutotheruser\",{'id':project.authorId.id}) }}\"><p>{{ project.authorId }}</p></a>
     <p>{{ project.description }}</p>
     
     <hr>

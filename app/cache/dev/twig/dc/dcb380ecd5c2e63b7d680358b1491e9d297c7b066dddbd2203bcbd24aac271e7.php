@@ -22,32 +22,32 @@ class __TwigTemplate_f98dcb432738f9e4277754ccd4c5cbca338545a36c7d617f6cb5b476bf6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d99c06440b2f1be9a3ec9303dc0a01a16e30e9b3e6ca085bfa1959fc18a4979a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d99c06440b2f1be9a3ec9303dc0a01a16e30e9b3e6ca085bfa1959fc18a4979a->enter($__internal_d99c06440b2f1be9a3ec9303dc0a01a16e30e9b3e6ca085bfa1959fc18a4979a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:get_sent_messages.html.twig"));
+        $__internal_3e87c988e7e35da9514de01f9a04164794c41f82225dafcea35cbb30b79d6d60 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3e87c988e7e35da9514de01f9a04164794c41f82225dafcea35cbb30b79d6d60->enter($__internal_3e87c988e7e35da9514de01f9a04164794c41f82225dafcea35cbb30b79d6d60_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:get_sent_messages.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d99c06440b2f1be9a3ec9303dc0a01a16e30e9b3e6ca085bfa1959fc18a4979a->leave($__internal_d99c06440b2f1be9a3ec9303dc0a01a16e30e9b3e6ca085bfa1959fc18a4979a_prof);
+        $__internal_3e87c988e7e35da9514de01f9a04164794c41f82225dafcea35cbb30b79d6d60->leave($__internal_3e87c988e7e35da9514de01f9a04164794c41f82225dafcea35cbb30b79d6d60_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_59ef151bd655adcb31d0c8868ea3ea1b0583df4906a10a0bfede9315fc26ed04 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_59ef151bd655adcb31d0c8868ea3ea1b0583df4906a10a0bfede9315fc26ed04->enter($__internal_59ef151bd655adcb31d0c8868ea3ea1b0583df4906a10a0bfede9315fc26ed04_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_fdf7a529f7f5904686abacc43a2225ac38769e7c5517614bd631205be52ab028 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fdf7a529f7f5904686abacc43a2225ac38769e7c5517614bd631205be52ab028->enter($__internal_fdf7a529f7f5904686abacc43a2225ac38769e7c5517614bd631205be52ab028_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Account:getSentMessages";
         
-        $__internal_59ef151bd655adcb31d0c8868ea3ea1b0583df4906a10a0bfede9315fc26ed04->leave($__internal_59ef151bd655adcb31d0c8868ea3ea1b0583df4906a10a0bfede9315fc26ed04_prof);
+        $__internal_fdf7a529f7f5904686abacc43a2225ac38769e7c5517614bd631205be52ab028->leave($__internal_fdf7a529f7f5904686abacc43a2225ac38769e7c5517614bd631205be52ab028_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3f353c3065137d37d423642cb24d7ecf5c82361238f55ad312bafdd126141e42 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3f353c3065137d37d423642cb24d7ecf5c82361238f55ad312bafdd126141e42->enter($__internal_3f353c3065137d37d423642cb24d7ecf5c82361238f55ad312bafdd126141e42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_67c044663901453498302471c808fb025631805ee4aa033c24ecd3341e6bf1cc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_67c044663901453498302471c808fb025631805ee4aa033c24ecd3341e6bf1cc->enter($__internal_67c044663901453498302471c808fb025631805ee4aa033c24ecd3341e6bf1cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -62,9 +62,11 @@ class __TwigTemplate_f98dcb432738f9e4277754ccd4c5cbca338545a36c7d617f6cb5b476bf6
         $context['_seq'] = twig_ensure_traversable(($context["messages"] ?? $this->getContext($context, "messages")));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
             // line 10
-            echo "        <p>";
+            echo "        <a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_showmessage", array("id" => $this->getAttribute($context["message"], "id", array()))), "html", null, true);
+            echo "\"><p>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["message"], "title", array()), "html", null, true);
-            echo "</p>
+            echo "</p></a>
     ";
         }
         $_parent = $context['_parent'];
@@ -74,7 +76,7 @@ class __TwigTemplate_f98dcb432738f9e4277754ccd4c5cbca338545a36c7d617f6cb5b476bf6
         echo "    
 ";
         
-        $__internal_3f353c3065137d37d423642cb24d7ecf5c82361238f55ad312bafdd126141e42->leave($__internal_3f353c3065137d37d423642cb24d7ecf5c82361238f55ad312bafdd126141e42_prof);
+        $__internal_67c044663901453498302471c808fb025631805ee4aa033c24ecd3341e6bf1cc->leave($__internal_67c044663901453498302471c808fb025631805ee4aa033c24ecd3341e6bf1cc_prof);
 
     }
 
@@ -90,7 +92,7 @@ class __TwigTemplate_f98dcb432738f9e4277754ccd4c5cbca338545a36c7d617f6cb5b476bf6
 
     public function getDebugInfo()
     {
-        return array (  74 => 12,  65 => 10,  61 => 9,  58 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  76 => 12,  65 => 10,  61 => 9,  58 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -112,7 +114,7 @@ class __TwigTemplate_f98dcb432738f9e4277754ccd4c5cbca338545a36c7d617f6cb5b476bf6
     {% include '/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Account/messagebar.html.twig' %}
     
     {% for message in messages %}
-        <p>{{ message.title }}</p>
+        <a href=\"{{ url(\"diyoh_account_showmessage\",{'id':message.id}) }}\"><p>{{ message.title }}</p></a>
     {% endfor %}
     
 {% endblock %}
