@@ -10,12 +10,20 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/")
-     * @Security("has_role('ROLE_USER')")
      */
     public function indexAction()
     {
-        
-        
         return $this->render('DiyohBundle:Default:index.html.twig');
+        
     }
+    
+    /**
+     * @Route("/signup")
+     */
+    public function signupAction()
+    {
+        return $this->render('DiyohBundle:Default:signup.html.twig');
+        
+    }
+    
 }

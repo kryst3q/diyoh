@@ -3,10 +3,11 @@
 {% block title %}DiyohBundle:Project:showMainCategories{% endblock %}
 
 {% block body %}
-
-    {{ dump(categories) }}
     
-    {% for el in categories.overriding %}
-        {{dump(el)}}
+    {% for category in categories.overriding %}
+        
+        <a href="{{ url('diyoh_project_showcategorycontent',{'id':category.id}) }}"><div>{{ category.name }}</div></a>
+        
     {%endfor%}
+    
 {% endblock %}

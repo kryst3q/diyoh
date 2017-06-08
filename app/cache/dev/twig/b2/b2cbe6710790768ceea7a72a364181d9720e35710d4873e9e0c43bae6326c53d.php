@@ -15,13 +15,11 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8c46b385fc2b7f43a39921ee2b15e973be60fe375c84a0f185c7582c08f3334f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8c46b385fc2b7f43a39921ee2b15e973be60fe375c84a0f185c7582c08f3334f->enter($__internal_8c46b385fc2b7f43a39921ee2b15e973be60fe375c84a0f185c7582c08f3334f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
+        $__internal_d1be856f7e22a01987ff00da6d26c3fb32d3013a9ed51a98303bfb243da47074 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d1be856f7e22a01987ff00da6d26c3fb32d3013a9ed51a98303bfb243da47074->enter($__internal_d1be856f7e22a01987ff00da6d26c3fb32d3013a9ed51a98303bfb243da47074_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
 
         // line 1
-        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER")) {
-            // line 2
-            echo "<nav class=\"navbar navbar-default\">
+        echo "<nav class=\"navbar navbar-default\">
     <div class=\"container-fluid\">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class=\"navbar-header\">
@@ -32,33 +30,33 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
                 <span class=\"icon-bar\"></span>
             </button>
             <a class=\"navbar-brand\" href=\"";
-            // line 12
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_default_index");
-            echo "\">diyoh</a>
+        // line 11
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_default_index");
+        echo "\">diyoh</a>
         </div>
 
         <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
             <ul class=\"nav navbar-nav\">
                 <li><a href=\"";
-            // line 17
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showmaincategories");
-            echo "\">Categories</a></li>
+        // line 16
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showmaincategories");
+        echo "\">Categories</a></li>
                 <li><a href=\"";
-            // line 18
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showprojects");
-            echo "\">Projects</a></li>
+        // line 17
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showprojects");
+        echo "\">Projects</a></li>
                 <li><a href=\"";
-            // line 19
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showtags");
-            echo "\">Tags</a></li>
+        // line 18
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showtags");
+        echo "\">Tags</a></li>
                 <li><a href=\"";
-            // line 20
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showtools");
-            echo "\">Tools</a></li>
+        // line 19
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showtools");
+        echo "\">Tools</a></li>
                 <li><a href=\"";
-            // line 21
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showmaterials");
-            echo "\">Materials</a></li>
+        // line 20
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showmaterials");
+        echo "\">Materials</a></li>
             </ul>
             <form class=\"navbar-form navbar-left\">
                 <div class=\"form-group\">
@@ -67,76 +65,88 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
                 <button type=\"submit\" class=\"btn btn-default\">Submit</button>
             </form>
             <ul class=\"nav navbar-nav navbar-right\">
-                
-                    <li class=\"dropdown\">
+                ";
+        // line 29
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER")) {
+            // line 30
+            echo "                    <li class=\"dropdown\">
                         <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-user\"></span> ";
-            // line 32
+            // line 31
             echo twig_escape_filter($this->env, $this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "html", null, true);
             echo " <span class=\"caret\"></span></a>
                         <ul class=\"dropdown-menu\">
                             <li><a href=\"";
-            // line 34
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("fos_user_profile_show");
+            // line 33
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_showprofile");
             echo "\">Profile</a></li>
                             <li><a href=\"";
-            // line 35
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("fos_user_profile_edit");
+            // line 34
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_editprofile");
             echo "\">Edit profile</a></li>
                             <li><a href=\"";
-            // line 36
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("fos_user_change_password");
+            // line 35
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_changepassword");
             echo "\">Change password</a></li>
                             <li role=\"separator\" class=\"divider\"></li>
                             <li><a href=\"";
-            // line 38
+            // line 37
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_getreceivedmessages");
             echo "\">Messages</a></li>
                             <li role=\"separator\" class=\"divider\"></li>
                             <li><a href=\"";
-            // line 40
+            // line 39
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_getallusercomments");
             echo "\">Comments</a></li>
                             <li role=\"separator\" class=\"divider\"></li>
                             <li><a href=\"";
-            // line 42
+            // line 41
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_getalluserdiscussions");
             echo "\">Discussions</a></li>
                             <li role=\"separator\" class=\"divider\"></li>
                             <li><a href=\"";
-            // line 44
+            // line 43
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_getalluservoices");
             echo "\">Voices</a></li>
                             <li role=\"separator\" class=\"divider\"></li>
                             <li><a href=\"";
-            // line 46
+            // line 45
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_getalluserprojects");
             echo "\">My projects</a></li>
                             <li><a href=\"";
-            // line 47
+            // line 46
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_getalluserfavouriteprojects");
             echo "\">Favourite projects</a></li>
                         </ul>
                     </li>
                     <li><a href=\"";
-            // line 50
+            // line 49
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("fos_user_security_logout");
             echo "\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a></li>
-                
-";
-            // line 53
-            echo "                
-            </ul>
+                ";
+        } else {
+            // line 51
+            echo "                    <li class=\"dropdown\">
+                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>
+                        <ul class=\"dropdown-menu\">
+                            <li>";
+            // line 54
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("FOSUserBundle:Security:login"));
+            echo "</li>
+                            <a href=\"";
+            // line 55
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_default_signup");
+            echo "\">Zarejestruj się</a>
+                        </ul>
+                    </li>
+                ";
+        }
+        // line 59
+        echo "            </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-</nav>
-";
-        } else {
-            // line 59
-            echo "    ";
-            $this->loadTemplate("../FOSUserBundle/views/layout_login.html.twig", "navbar.html.twig", 59)->display($context);
-        }
+</nav>";
         
-        $__internal_8c46b385fc2b7f43a39921ee2b15e973be60fe375c84a0f185c7582c08f3334f->leave($__internal_8c46b385fc2b7f43a39921ee2b15e973be60fe375c84a0f185c7582c08f3334f_prof);
+        $__internal_d1be856f7e22a01987ff00da6d26c3fb32d3013a9ed51a98303bfb243da47074->leave($__internal_d1be856f7e22a01987ff00da6d26c3fb32d3013a9ed51a98303bfb243da47074_prof);
 
     }
 
@@ -152,7 +162,7 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
 
     public function getDebugInfo()
     {
-        return array (  135 => 59,  127 => 53,  122 => 50,  116 => 47,  112 => 46,  107 => 44,  102 => 42,  97 => 40,  92 => 38,  87 => 36,  83 => 35,  79 => 34,  74 => 32,  60 => 21,  56 => 20,  52 => 19,  48 => 18,  44 => 17,  36 => 12,  24 => 2,  22 => 1,);
+        return array (  144 => 59,  137 => 55,  133 => 54,  128 => 51,  123 => 49,  117 => 46,  113 => 45,  108 => 43,  103 => 41,  98 => 39,  93 => 37,  88 => 35,  84 => 34,  80 => 33,  75 => 31,  72 => 30,  70 => 29,  58 => 20,  54 => 19,  50 => 18,  46 => 17,  42 => 16,  34 => 11,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -165,8 +175,7 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% if is_granted('ROLE_USER') %}
-<nav class=\"navbar navbar-default\">
+        return new Twig_Source("<nav class=\"navbar navbar-default\">
     <div class=\"container-fluid\">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class=\"navbar-header\">
@@ -194,13 +203,13 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
                 <button type=\"submit\" class=\"btn btn-default\">Submit</button>
             </form>
             <ul class=\"nav navbar-nav navbar-right\">
-                
+                {% if is_granted('ROLE_USER') %}
                     <li class=\"dropdown\">
                         <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-user\"></span> {{ app.user }} <span class=\"caret\"></span></a>
                         <ul class=\"dropdown-menu\">
-                            <li><a href=\"{{ url(\"fos_user_profile_show\") }}\">Profile</a></li>
-                            <li><a href=\"{{ url(\"fos_user_profile_edit\") }}\">Edit profile</a></li>
-                            <li><a href=\"{{ url(\"fos_user_change_password\") }}\">Change password</a></li>
+                            <li><a href=\"{{ url(\"diyoh_account_showprofile\") }}\">Profile</a></li>
+                            <li><a href=\"{{ url(\"diyoh_account_editprofile\") }}\">Edit profile</a></li>
+                            <li><a href=\"{{ url(\"diyoh_account_changepassword\") }}\">Change password</a></li>
                             <li role=\"separator\" class=\"divider\"></li>
                             <li><a href=\"{{ url(\"diyoh_account_getreceivedmessages\") }}\">Messages</a></li>
                             <li role=\"separator\" class=\"divider\"></li>
@@ -215,15 +224,18 @@ class __TwigTemplate_c4e8e10991edd4095edadb5690a48fcb808fab897e2736ccdb315b2c2b8
                         </ul>
                     </li>
                     <li><a href=\"{{ url(\"fos_user_security_logout\") }}\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a></li>
-                
-{#                    <li><a href=\"{{ url(\"fos_user_security_login\") }}\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a></li>#}
-                
+                {% else %}
+                    <li class=\"dropdown\">
+                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>
+                        <ul class=\"dropdown-menu\">
+                            <li>{{ render(controller('FOSUserBundle:Security:login')) }}</li>
+                            <a href=\"{{ url(\"diyoh_default_signup\") }}\">Zarejestruj się</a>
+                        </ul>
+                    </li>
+                {% endif %}
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-</nav>
-{% else %}
-    {% include '../FOSUserBundle/views/layout_login.html.twig' %}
-{% endif %}", "navbar.html.twig", "/home/krystian/Workspace/diyoh/app/Resources/views/navbar.html.twig");
+</nav>", "navbar.html.twig", "/home/krystian/Workspace/diyoh/app/Resources/views/navbar.html.twig");
     }
 }

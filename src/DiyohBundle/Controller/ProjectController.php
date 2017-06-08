@@ -25,6 +25,19 @@ class ProjectController extends Controller
             'categories' => $categories
         ));
     }
+    
+    /**
+     * @Route("/category/{id}")
+     */
+    public function showCategoryContentAction($id) {
+        
+        $em = $this->getDoctrine()->getManager();
+        $category = $em->getRepository("DiyohBundle:Category")->findOneById($id);
+        
+        return $this->render('DiyohBundle:Project:show_category_content.html.twig', array(
+            'category' => $category
+        ));
+    }
 
     /**
      * @Route("/tools")

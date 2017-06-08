@@ -8,7 +8,7 @@ class __TwigTemplate_aa069a0b053ddac4c32447dc44d3f228b08b474877edbb2f6bbcdc6aad2
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("@FOSUser/layout_register.html.twig", "@FOSUser/Registration/register.html.twig", 1);
+        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "@FOSUser/Registration/register.html.twig", 1);
         $this->blocks = array(
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -16,30 +16,30 @@ class __TwigTemplate_aa069a0b053ddac4c32447dc44d3f228b08b474877edbb2f6bbcdc6aad2
 
     protected function doGetParent(array $context)
     {
-        return "@FOSUser/layout_register.html.twig";
+        return "@FOSUser/layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fd14ed6024531b4b3da6f7001e6bccd97c7937ff67f791c67897f674e9ed0f46 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fd14ed6024531b4b3da6f7001e6bccd97c7937ff67f791c67897f674e9ed0f46->enter($__internal_fd14ed6024531b4b3da6f7001e6bccd97c7937ff67f791c67897f674e9ed0f46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register.html.twig"));
+        $__internal_976a523f702a69c6563ad91922775589c6a1a0954730dd332f5dcedb30db3c82 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_976a523f702a69c6563ad91922775589c6a1a0954730dd332f5dcedb30db3c82->enter($__internal_976a523f702a69c6563ad91922775589c6a1a0954730dd332f5dcedb30db3c82_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fd14ed6024531b4b3da6f7001e6bccd97c7937ff67f791c67897f674e9ed0f46->leave($__internal_fd14ed6024531b4b3da6f7001e6bccd97c7937ff67f791c67897f674e9ed0f46_prof);
+        $__internal_976a523f702a69c6563ad91922775589c6a1a0954730dd332f5dcedb30db3c82->leave($__internal_976a523f702a69c6563ad91922775589c6a1a0954730dd332f5dcedb30db3c82_prof);
 
     }
 
     // line 3
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_a2fe938c5501838ac3c66e8ed36f97a3275c3225e5aa5465f376fa27615c4144 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a2fe938c5501838ac3c66e8ed36f97a3275c3225e5aa5465f376fa27615c4144->enter($__internal_a2fe938c5501838ac3c66e8ed36f97a3275c3225e5aa5465f376fa27615c4144_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_20c0bd4414520df280ae7520742345d2232f62d8629c6ca9d69bc62888aac37c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_20c0bd4414520df280ae7520742345d2232f62d8629c6ca9d69bc62888aac37c->enter($__internal_20c0bd4414520df280ae7520742345d2232f62d8629c6ca9d69bc62888aac37c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 4
         $this->loadTemplate("@FOSUser/Registration/register_content.html.twig", "@FOSUser/Registration/register.html.twig", 4)->display($context);
         
-        $__internal_a2fe938c5501838ac3c66e8ed36f97a3275c3225e5aa5465f376fa27615c4144->leave($__internal_a2fe938c5501838ac3c66e8ed36f97a3275c3225e5aa5465f376fa27615c4144_prof);
+        $__internal_20c0bd4414520df280ae7520742345d2232f62d8629c6ca9d69bc62888aac37c->leave($__internal_20c0bd4414520df280ae7520742345d2232f62d8629c6ca9d69bc62888aac37c_prof);
 
     }
 
@@ -68,7 +68,7 @@ class __TwigTemplate_aa069a0b053ddac4c32447dc44d3f228b08b474877edbb2f6bbcdc6aad2
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends \"@FOSUser/layout_register.html.twig\" %}
+        return new Twig_Source("{% extends \"@FOSUser/layout.html.twig\" %}
 
 {% block fos_user_content %}
 {% include \"@FOSUser/Registration/register_content.html.twig\" %}

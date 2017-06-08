@@ -5,14 +5,44 @@ namespace DiyohBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use DiyohBundle\Entity\Message;
+use DiyohBundle\Entity\Project;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use DiyohBundle\Service\FileUploader;
 
 /**
  * @Route("/account")
  */
 class AccountController extends Controller
 {
+    /**
+     * @Route("/profile")
+     */
+    public function showProfileAction() {
+        
+        return $this->render('DiyohBundle:Account:show_profile.html.twig');
+        
+    }
+    
+    /**
+     * @Route("/edit_profile")
+     */
+    public function editProfileAction() {
+        
+        return $this->render('DiyohBundle:Account:edit_profile.html.twig');
+        
+    }
+    
+    /**
+     * @Route("/change_password")
+     */
+    public function changePasswordAction() {
+        
+        return $this->render('DiyohBundle:Account:change_password.html.twig');
+        
+    }
+    
     /**
      * @Route("/messages")
      */
@@ -114,6 +144,71 @@ class AccountController extends Controller
     public function getAllUserProjectsAction()
     {
         return $this->render('DiyohBundle:Account:get_all_user_projects.html.twig', array());
+    }
+    
+    /**
+     * @Route("/projects/new")
+     * @Method({"GET","POST"})
+     */
+    public function addNewProject(Request $request) {
+        
+        $project = new Project();
+        $form = $this->createFormBuilder($project)
+                ->add('name','text')
+                ->add('description','text')
+                ->add('materials', 'entity', array(
+                    'class' => 'DiyohBundle:Material',
+                    'choice_label' => 'name',
+                    'multiple' => true,
+                    'expanded' => true,
+                ))
+                ->add('tools', 'entity', array(
+                    'class' => 'DiyohBundle:Tool',
+                    'choice_label' => 'name',
+                    'multiple' => true,
+                    'expanded' => true,
+                ))
+                ->add('tags', 'entity', array(
+                    'class' => 'DiyohBundle:Tag',
+                    'choice_label' => 'name',
+                    'multiple' => true,
+                    'expanded' => true,
+                ))
+                ->add('categories', 'entity', array(
+                    'class' => 'DiyohBundle:Category',
+                    'choice_label' => 'name',
+                    'multiple' => true,
+                    'expanded' => true,
+                ))
+                ->add('instruction','text')
+                ->add('imagesPaths', FileType::class, array(
+                    'label' => 'Upload images'
+                ))
+                ->add('schemesPaths', FileType::class, array(
+                    'label' => 'Upload schemes'
+                ))
+                ->add('moviesPaths', FileType::class, array(
+                    'label' => 'Upload video'
+                ))
+                ->add('cadPath', FileType::class, array(
+                    'label' => 'Upload CAD file'
+                ))
+                ->add('printablePartsPaths', FileType::class, array(
+                    'label' => 'Upload 3D printer file'
+                ))
+                ->add('Add','submit')
+                ->getForm();
+        
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted()) {
+            
+            $project = $form->getData();
+            
+        }
+        
+        return $this->render('DiyohBundle:Account:add_new_project.html.twig', array('form' => $form->createView()));
+        
     }
 
     /**

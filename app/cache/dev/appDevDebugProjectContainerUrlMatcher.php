@@ -106,6 +106,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/account')) {
+            // diyoh_account_showprofile
+            if ($pathinfo === '/account/profile') {
+                return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::showProfileAction',  '_route' => 'diyoh_account_showprofile',);
+            }
+
+            // diyoh_account_editprofile
+            if ($pathinfo === '/account/edit_profile') {
+                return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::editProfileAction',  '_route' => 'diyoh_account_editprofile',);
+            }
+
+            // diyoh_account_changepassword
+            if ($pathinfo === '/account/change_password') {
+                return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::changePasswordAction',  '_route' => 'diyoh_account_changepassword',);
+            }
+
             if (0 === strpos($pathinfo, '/account/message')) {
                 if (0 === strpos($pathinfo, '/account/messages')) {
                     // diyoh_account_showmessagesmenu
@@ -147,9 +162,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::getAllUserVoicesAction',  '_route' => 'diyoh_account_getalluservoices',);
             }
 
-            // diyoh_account_getalluserprojects
-            if ($pathinfo === '/account/projects') {
-                return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::getAllUserProjectsAction',  '_route' => 'diyoh_account_getalluserprojects',);
+            if (0 === strpos($pathinfo, '/account/projects')) {
+                // diyoh_account_getalluserprojects
+                if ($pathinfo === '/account/projects') {
+                    return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::getAllUserProjectsAction',  '_route' => 'diyoh_account_getalluserprojects',);
+                }
+
+                // diyoh_account_addnewproject
+                if ($pathinfo === '/account/projects/new') {
+                    return array (  '_controller' => 'DiyohBundle\\Controller\\AccountController::addNewProject',  '_route' => 'diyoh_account_addnewproject',);
+                }
+
             }
 
             // diyoh_account_getalluserfavouriteprojects
@@ -168,9 +191,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'DiyohBundle\\Controller\\DefaultController::indexAction',  '_route' => 'diyoh_default_index',);
         }
 
-        // diyoh_project_showmaincategories
-        if ($pathinfo === '/categories') {
-            return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showMainCategoriesAction',  '_route' => 'diyoh_project_showmaincategories',);
+        // diyoh_default_signup
+        if ($pathinfo === '/signup') {
+            return array (  '_controller' => 'DiyohBundle\\Controller\\DefaultController::signupAction',  '_route' => 'diyoh_default_signup',);
+        }
+
+        if (0 === strpos($pathinfo, '/categor')) {
+            // diyoh_project_showmaincategories
+            if ($pathinfo === '/categories') {
+                return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showMainCategoriesAction',  '_route' => 'diyoh_project_showmaincategories',);
+            }
+
+            // diyoh_project_showcategorycontent
+            if (0 === strpos($pathinfo, '/category') && preg_match('#^/category/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showcategorycontent')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showCategoryContentAction',));
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/tool')) {

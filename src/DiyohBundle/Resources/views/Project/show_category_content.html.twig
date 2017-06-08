@@ -1,0 +1,27 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Project:showMainCategories{% endblock %}
+
+{% block body %}
+    
+    {% for el in category.overriding %}
+        
+        <a href="{{ url('diyoh_project_showcategorycontent',{'id':el.id}) }}"><div>{{ el.name }}</div></a>
+        
+    {%endfor%}
+    
+    <hr>
+    
+    {% for project in category.projects %}
+        
+        <a href="{{ url('diyoh_project_showproject',{'id':project.id}) }}">{{ project.name }}</a>
+        
+    {% endfor %}
+    
+    {% for tool in category.tools %}
+        
+        <a href="{{ url('diyoh_project_showproject',{'id':tool.id}) }}">{{ tool.name }}</a>
+        
+    {% endfor %}
+    
+{% endblock %}

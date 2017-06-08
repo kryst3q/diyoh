@@ -8,7 +8,7 @@ class __TwigTemplate_bcfeafd6e70363910ec8fd33110981e8c9888210463926a1de6e1585975
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("@FOSUser/layout_login.html.twig", "@FOSUser/Security/login.html.twig", 1);
+        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "@FOSUser/Security/login.html.twig", 1);
         $this->blocks = array(
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -16,25 +16,25 @@ class __TwigTemplate_bcfeafd6e70363910ec8fd33110981e8c9888210463926a1de6e1585975
 
     protected function doGetParent(array $context)
     {
-        return "@FOSUser/layout_login.html.twig";
+        return "@FOSUser/layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1068a8d533de307b8beb99cd976a908dfc5d10448781c7d8c09dafc1314ffe59 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1068a8d533de307b8beb99cd976a908dfc5d10448781c7d8c09dafc1314ffe59->enter($__internal_1068a8d533de307b8beb99cd976a908dfc5d10448781c7d8c09dafc1314ffe59_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Security/login.html.twig"));
+        $__internal_c2a50c77437498d0e11ac829a767c4014aa2d546a46af3e36cb4fbb688eb1296 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c2a50c77437498d0e11ac829a767c4014aa2d546a46af3e36cb4fbb688eb1296->enter($__internal_c2a50c77437498d0e11ac829a767c4014aa2d546a46af3e36cb4fbb688eb1296_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Security/login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1068a8d533de307b8beb99cd976a908dfc5d10448781c7d8c09dafc1314ffe59->leave($__internal_1068a8d533de307b8beb99cd976a908dfc5d10448781c7d8c09dafc1314ffe59_prof);
+        $__internal_c2a50c77437498d0e11ac829a767c4014aa2d546a46af3e36cb4fbb688eb1296->leave($__internal_c2a50c77437498d0e11ac829a767c4014aa2d546a46af3e36cb4fbb688eb1296_prof);
 
     }
 
     // line 3
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_f939582bdacb73ca264f194d9277fc68bc5ad913b2960a5cbd6628852d7e89cd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f939582bdacb73ca264f194d9277fc68bc5ad913b2960a5cbd6628852d7e89cd->enter($__internal_f939582bdacb73ca264f194d9277fc68bc5ad913b2960a5cbd6628852d7e89cd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_3834ac498863e084ea777c9abe3fb335b15862f708e581a766de915b1be55b97 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3834ac498863e084ea777c9abe3fb335b15862f708e581a766de915b1be55b97->enter($__internal_3834ac498863e084ea777c9abe3fb335b15862f708e581a766de915b1be55b97_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 4
         echo "    ";
@@ -42,7 +42,7 @@ class __TwigTemplate_bcfeafd6e70363910ec8fd33110981e8c9888210463926a1de6e1585975
         echo "
 ";
         
-        $__internal_f939582bdacb73ca264f194d9277fc68bc5ad913b2960a5cbd6628852d7e89cd->leave($__internal_f939582bdacb73ca264f194d9277fc68bc5ad913b2960a5cbd6628852d7e89cd_prof);
+        $__internal_3834ac498863e084ea777c9abe3fb335b15862f708e581a766de915b1be55b97->leave($__internal_3834ac498863e084ea777c9abe3fb335b15862f708e581a766de915b1be55b97_prof);
 
     }
 
@@ -71,7 +71,7 @@ class __TwigTemplate_bcfeafd6e70363910ec8fd33110981e8c9888210463926a1de6e1585975
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends \"@FOSUser/layout_login.html.twig\" %}
+        return new Twig_Source("{% extends \"@FOSUser/layout.html.twig\" %}
 
 {% block fos_user_content %}
     {{ include('@FOSUser/Security/login_content.html.twig') }}

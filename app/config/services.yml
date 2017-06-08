@@ -7,3 +7,12 @@ services:
     #service_name:
     #    class: AppBundle\Directory\ClassName
     #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
+    DiyohBundle\Service\FileUploader:
+        arguments:
+            $targetDir: '%files_directory%'
+    fos_user.change_password.edit.success:
+        class: DiyohBundle\EventListener\RedirectAfterPasswordChange
+        arguments: ['routing.loader']
+    fos_user.registration.completed:
+        class: DiyohBundle\EventListener\RedirectAfterRegistration
+        arguments: ['routing.loader']

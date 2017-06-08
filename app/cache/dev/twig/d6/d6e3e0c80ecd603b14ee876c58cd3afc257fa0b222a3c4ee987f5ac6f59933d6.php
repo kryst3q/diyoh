@@ -22,56 +22,59 @@ class __TwigTemplate_59c32fa5ccd12aac4e0f39ea09495a3f6acc4c8703c73f7e41263d03fe7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_301a8b1ee6fb3c6e0fe9c2b8bce5b00c26233db1d1c9d08677b81adfadcb4ded = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_301a8b1ee6fb3c6e0fe9c2b8bce5b00c26233db1d1c9d08677b81adfadcb4ded->enter($__internal_301a8b1ee6fb3c6e0fe9c2b8bce5b00c26233db1d1c9d08677b81adfadcb4ded_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_main_categories.html.twig"));
+        $__internal_000eca85436cb5a0904fc0bc1afbaa5dcfc3602f90b49b75905b5ecb93c6218e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_000eca85436cb5a0904fc0bc1afbaa5dcfc3602f90b49b75905b5ecb93c6218e->enter($__internal_000eca85436cb5a0904fc0bc1afbaa5dcfc3602f90b49b75905b5ecb93c6218e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_main_categories.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_301a8b1ee6fb3c6e0fe9c2b8bce5b00c26233db1d1c9d08677b81adfadcb4ded->leave($__internal_301a8b1ee6fb3c6e0fe9c2b8bce5b00c26233db1d1c9d08677b81adfadcb4ded_prof);
+        $__internal_000eca85436cb5a0904fc0bc1afbaa5dcfc3602f90b49b75905b5ecb93c6218e->leave($__internal_000eca85436cb5a0904fc0bc1afbaa5dcfc3602f90b49b75905b5ecb93c6218e_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_9fb30ef6a1fb7b9e067970fe870997ff39218ada5f0fab91a7cccdbbbae956f5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9fb30ef6a1fb7b9e067970fe870997ff39218ada5f0fab91a7cccdbbbae956f5->enter($__internal_9fb30ef6a1fb7b9e067970fe870997ff39218ada5f0fab91a7cccdbbbae956f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_52787a5e0d0e2c15a75d2655c4a5bca1759e2be6a65172c6d4c8c7114921dd4e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_52787a5e0d0e2c15a75d2655c4a5bca1759e2be6a65172c6d4c8c7114921dd4e->enter($__internal_52787a5e0d0e2c15a75d2655c4a5bca1759e2be6a65172c6d4c8c7114921dd4e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Project:showMainCategories";
         
-        $__internal_9fb30ef6a1fb7b9e067970fe870997ff39218ada5f0fab91a7cccdbbbae956f5->leave($__internal_9fb30ef6a1fb7b9e067970fe870997ff39218ada5f0fab91a7cccdbbbae956f5_prof);
+        $__internal_52787a5e0d0e2c15a75d2655c4a5bca1759e2be6a65172c6d4c8c7114921dd4e->leave($__internal_52787a5e0d0e2c15a75d2655c4a5bca1759e2be6a65172c6d4c8c7114921dd4e_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f3533338140df4642eebd883ec1e352b49fbcab920eeb1d290039bb01ad3567c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f3533338140df4642eebd883ec1e352b49fbcab920eeb1d290039bb01ad3567c->enter($__internal_f3533338140df4642eebd883ec1e352b49fbcab920eeb1d290039bb01ad3567c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ed0888321e990ced02307046b9d0569d1f0667565fbcf95013fd8328a54ca50f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ed0888321e990ced02307046b9d0569d1f0667565fbcf95013fd8328a54ca50f->enter($__internal_ed0888321e990ced02307046b9d0569d1f0667565fbcf95013fd8328a54ca50f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "
+        echo "    
     ";
         // line 7
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\DumpExtension')->dump($this->env, $context, ($context["categories"] ?? $this->getContext($context, "categories")));
-        echo "
-    
-    ";
-        // line 9
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["categories"] ?? $this->getContext($context, "categories")), "overriding", array()));
-        foreach ($context['_seq'] as $context["_key"] => $context["el"]) {
-            // line 10
-            echo "        ";
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\DumpExtension')->dump($this->env, $context, $context["el"]);
-            echo "
+        foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
+            // line 8
+            echo "        
+        <a href=\"";
+            // line 9
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showcategorycontent", array("id" => $this->getAttribute($context["category"], "id", array()))), "html", null, true);
+            echo "\"><div>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
+            echo "</div></a>
+        
     ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['el'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 12
+        echo "    
+";
         
-        $__internal_f3533338140df4642eebd883ec1e352b49fbcab920eeb1d290039bb01ad3567c->leave($__internal_f3533338140df4642eebd883ec1e352b49fbcab920eeb1d290039bb01ad3567c_prof);
+        $__internal_ed0888321e990ced02307046b9d0569d1f0667565fbcf95013fd8328a54ca50f->leave($__internal_ed0888321e990ced02307046b9d0569d1f0667565fbcf95013fd8328a54ca50f_prof);
 
     }
 
@@ -87,7 +90,7 @@ class __TwigTemplate_59c32fa5ccd12aac4e0f39ea09495a3f6acc4c8703c73f7e41263d03fe7
 
     public function getDebugInfo()
     {
-        return array (  65 => 10,  61 => 9,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  74 => 12,  63 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -105,12 +108,13 @@ class __TwigTemplate_59c32fa5ccd12aac4e0f39ea09495a3f6acc4c8703c73f7e41263d03fe7
 {% block title %}DiyohBundle:Project:showMainCategories{% endblock %}
 
 {% block body %}
-
-    {{ dump(categories) }}
     
-    {% for el in categories.overriding %}
-        {{dump(el)}}
+    {% for category in categories.overriding %}
+        
+        <a href=\"{{ url('diyoh_project_showcategorycontent',{'id':category.id}) }}\"><div>{{ category.name }}</div></a>
+        
     {%endfor%}
+    
 {% endblock %}
 ", "DiyohBundle:Project:show_main_categories.html.twig", "/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Project/show_main_categories.html.twig");
     }
