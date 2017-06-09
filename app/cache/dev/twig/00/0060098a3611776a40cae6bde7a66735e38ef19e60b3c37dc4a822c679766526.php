@@ -22,54 +22,108 @@ class __TwigTemplate_1d9bb7bd4d49f0c0648a105ddfd4ce0c25da9ea8e9a0e9d1161ffed65c6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_594eb5fc85f1fbe9616d54c5450ea27e4d776d60ba4eaffd161908214672b6e2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_594eb5fc85f1fbe9616d54c5450ea27e4d776d60ba4eaffd161908214672b6e2->enter($__internal_594eb5fc85f1fbe9616d54c5450ea27e4d776d60ba4eaffd161908214672b6e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:get_all_user_comments.html.twig"));
+        $__internal_335b158c42a16e95031d4a383085a558f2ab0e92fa53df8dcc2ce94cc869a2fb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_335b158c42a16e95031d4a383085a558f2ab0e92fa53df8dcc2ce94cc869a2fb->enter($__internal_335b158c42a16e95031d4a383085a558f2ab0e92fa53df8dcc2ce94cc869a2fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:get_all_user_comments.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_594eb5fc85f1fbe9616d54c5450ea27e4d776d60ba4eaffd161908214672b6e2->leave($__internal_594eb5fc85f1fbe9616d54c5450ea27e4d776d60ba4eaffd161908214672b6e2_prof);
+        $__internal_335b158c42a16e95031d4a383085a558f2ab0e92fa53df8dcc2ce94cc869a2fb->leave($__internal_335b158c42a16e95031d4a383085a558f2ab0e92fa53df8dcc2ce94cc869a2fb_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_e993e6ff7155442e6f0f226a41d0f3555d6a07c2c3a033ac2bfd0e2573484cc2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e993e6ff7155442e6f0f226a41d0f3555d6a07c2c3a033ac2bfd0e2573484cc2->enter($__internal_e993e6ff7155442e6f0f226a41d0f3555d6a07c2c3a033ac2bfd0e2573484cc2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_adf164352ecc438380077548c3378f434a9b9878268ddaadb72e57d1276beea4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_adf164352ecc438380077548c3378f434a9b9878268ddaadb72e57d1276beea4->enter($__internal_adf164352ecc438380077548c3378f434a9b9878268ddaadb72e57d1276beea4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Account:getAllUserComments";
         
-        $__internal_e993e6ff7155442e6f0f226a41d0f3555d6a07c2c3a033ac2bfd0e2573484cc2->leave($__internal_e993e6ff7155442e6f0f226a41d0f3555d6a07c2c3a033ac2bfd0e2573484cc2_prof);
+        $__internal_adf164352ecc438380077548c3378f434a9b9878268ddaadb72e57d1276beea4->leave($__internal_adf164352ecc438380077548c3378f434a9b9878268ddaadb72e57d1276beea4_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d908d14053957dbf0cc1e09708ee55cee5d3cb45b7f8df1b7040359755ed82de = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d908d14053957dbf0cc1e09708ee55cee5d3cb45b7f8df1b7040359755ed82de->enter($__internal_d908d14053957dbf0cc1e09708ee55cee5d3cb45b7f8df1b7040359755ed82de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_cde84d83fc1507d65b2aaee389983271b6255f5d7f9784fa5b54cd79cc23eacc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cde84d83fc1507d65b2aaee389983271b6255f5d7f9784fa5b54cd79cc23eacc->enter($__internal_cde84d83fc1507d65b2aaee389983271b6255f5d7f9784fa5b54cd79cc23eacc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
-    ";
-        // line 7
+    <div class=\"container\">
+
+        <ol class=\"breadcrumb\">
+            <li><a href=\"#\">Home</a></li>
+            <li><a href=\"#\">Account</a></li>
+            <li class=\"active\">Comments</li>
+        </ol>
+
+        <div class=\"row\">
+
+            <div class=\"col-md-3\"></div>
+            <div class=\"col-md-6 project-table\">
+                <table class=\"table table-hover\">
+                    <thead>
+                        <tr>
+                            <th>
+                                Comment
+                            </th>
+                            <th>
+                                Project
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ";
+        // line 34
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["comments"] ?? $this->getContext($context, "comments")));
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 8
-            echo "        <p>";
+            // line 35
+            echo "                            <tr>
+                                <td>
+                                    ";
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute($context["comment"], "text", array()), "html", null, true);
-            echo "</p></a>
-    ";
+            echo "
+                                </td>
+                                <td>
+                                    <a href=\"";
+            // line 40
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showproject", array("id" => $this->getAttribute($this->getAttribute($context["comment"], "projectId", array()), "id", array()))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["comment"], "projectId", array()), "name", array()), "html", null, true);
+            echo "</a>
+                                </td>
+                                <td>
+                                    ";
+            // line 43
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["comment"], "sendDatetime", array()), "date", array()), "html", null, true);
+            echo "
+                                </td>
+                            </tr>
+                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 10
-        echo "    
+        // line 47
+        echo "                    </tbody>
+                </table>
+            </div>
+            <div class=\"col-md-3\"></div>
+
+        </div>
+
+    </div>
+
 ";
         
-        $__internal_d908d14053957dbf0cc1e09708ee55cee5d3cb45b7f8df1b7040359755ed82de->leave($__internal_d908d14053957dbf0cc1e09708ee55cee5d3cb45b7f8df1b7040359755ed82de_prof);
+        $__internal_cde84d83fc1507d65b2aaee389983271b6255f5d7f9784fa5b54cd79cc23eacc->leave($__internal_cde84d83fc1507d65b2aaee389983271b6255f5d7f9784fa5b54cd79cc23eacc_prof);
 
     }
 
@@ -85,7 +139,7 @@ class __TwigTemplate_1d9bb7bd4d49f0c0648a105ddfd4ce0c25da9ea8e9a0e9d1161ffed65c6
 
     public function getDebugInfo()
     {
-        return array (  69 => 10,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  115 => 47,  105 => 43,  97 => 40,  91 => 37,  87 => 35,  83 => 34,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -104,10 +158,55 @@ class __TwigTemplate_1d9bb7bd4d49f0c0648a105ddfd4ce0c25da9ea8e9a0e9d1161ffed65c6
 
 {% block body %}
 
-    {% for comment in comments %}
-        <p>{{ comment.text }}</p></a>
-    {% endfor %}
-    
+    <div class=\"container\">
+
+        <ol class=\"breadcrumb\">
+            <li><a href=\"#\">Home</a></li>
+            <li><a href=\"#\">Account</a></li>
+            <li class=\"active\">Comments</li>
+        </ol>
+
+        <div class=\"row\">
+
+            <div class=\"col-md-3\"></div>
+            <div class=\"col-md-6 project-table\">
+                <table class=\"table table-hover\">
+                    <thead>
+                        <tr>
+                            <th>
+                                Comment
+                            </th>
+                            <th>
+                                Project
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for comment in comments %}
+                            <tr>
+                                <td>
+                                    {{ comment.text }}
+                                </td>
+                                <td>
+                                    <a href=\"{{ url('diyoh_project_showproject',{'id':comment.projectId.id}) }}\">{{ comment.projectId.name }}</a>
+                                </td>
+                                <td>
+                                    {{ comment.sendDatetime.date }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class=\"col-md-3\"></div>
+
+        </div>
+
+    </div>
+
 {% endblock %}
 ", "DiyohBundle:Account:get_all_user_comments.html.twig", "/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Account/get_all_user_comments.html.twig");
     }

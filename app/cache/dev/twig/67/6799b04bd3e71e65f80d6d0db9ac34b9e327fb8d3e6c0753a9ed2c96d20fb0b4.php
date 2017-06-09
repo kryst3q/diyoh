@@ -15,8 +15,8 @@ class __TwigTemplate_4d4e1d0ea798bc3c7b22c7402e5b89838c682c3e69824f82cf8ad3c1e3e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c54be9be40ad74d2f1f0a0782aaa6b205126f92720d6b7050e57d078a93b9079 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c54be9be40ad74d2f1f0a0782aaa6b205126f92720d6b7050e57d078a93b9079->enter($__internal_c54be9be40ad74d2f1f0a0782aaa6b205126f92720d6b7050e57d078a93b9079_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login_content.html.twig"));
+        $__internal_9854df9c14850a4d93ee600387fc1f4d47bff8905a36e68919d89da1c2bf7dcf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9854df9c14850a4d93ee600387fc1f4d47bff8905a36e68919d89da1c2bf7dcf->enter($__internal_9854df9c14850a4d93ee600387fc1f4d47bff8905a36e68919d89da1c2bf7dcf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login_content.html.twig"));
 
         // line 2
         echo "
@@ -45,36 +45,39 @@ class __TwigTemplate_4d4e1d0ea798bc3c7b22c7402e5b89838c682c3e69824f82cf8ad3c1e3e
     ";
         }
         // line 11
-        echo "
-    <label for=\"username\">";
+        echo "    <div class=\"form-group\">
+        <label for=\"username\">";
         // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.username", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
-    <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
+        <input type=\"text\" id=\"username\" class=\"form-control\" name=\"_username\" value=\"";
         // line 13
         echo twig_escape_filter($this->env, ($context["last_username"] ?? $this->getContext($context, "last_username")), "html", null, true);
         echo "\" required=\"required\" />
-
-    <label for=\"password\">";
-        // line 15
+    </div>
+    <div class=\"form-group\">
+        <label for=\"password\">";
+        // line 16
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.password", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
-    <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" />
-
-    <input type=\"checkbox\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
-    <label for=\"remember_me\">";
-        // line 19
+        <input type=\"password\" id=\"password\" class=\"form-control\" name=\"_password\" required=\"required\" />
+    </div>
+    <div class=\"checkbox\">
+        <label for=\"remember_me\"><input type=\"checkbox\" id=\"remember_me\" class=\"form-control\" name=\"_remember_me\" value=\"on\" />";
+        // line 20
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.remember_me", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
-
-    <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"";
-        // line 21
+    </div>
+    <div>
+        <input type=\"submit\" id=\"_submit\" class=\"btn btn-success\" name=\"_submit\" value=\"";
+        // line 23
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.submit", array(), "FOSUserBundle"), "html", null, true);
         echo "\" />
+    </div>
 </form>
 ";
         
-        $__internal_c54be9be40ad74d2f1f0a0782aaa6b205126f92720d6b7050e57d078a93b9079->leave($__internal_c54be9be40ad74d2f1f0a0782aaa6b205126f92720d6b7050e57d078a93b9079_prof);
+        $__internal_9854df9c14850a4d93ee600387fc1f4d47bff8905a36e68919d89da1c2bf7dcf->leave($__internal_9854df9c14850a4d93ee600387fc1f4d47bff8905a36e68919d89da1c2bf7dcf_prof);
 
     }
 
@@ -90,7 +93,7 @@ class __TwigTemplate_4d4e1d0ea798bc3c7b22c7402e5b89838c682c3e69824f82cf8ad3c1e3e
 
     public function getDebugInfo()
     {
-        return array (  72 => 21,  67 => 19,  60 => 15,  55 => 13,  51 => 12,  48 => 11,  42 => 9,  40 => 8,  36 => 7,  33 => 6,  27 => 4,  25 => 3,  22 => 2,);
+        return array (  74 => 23,  68 => 20,  61 => 16,  55 => 13,  51 => 12,  48 => 11,  42 => 9,  40 => 8,  36 => 7,  33 => 6,  27 => 4,  25 => 3,  22 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -113,17 +116,20 @@ class __TwigTemplate_4d4e1d0ea798bc3c7b22c7402e5b89838c682c3e69824f82cf8ad3c1e3e
     {% if csrf_token %}
         <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token }}\" />
     {% endif %}
-
-    <label for=\"username\">{{ 'security.login.username'|trans }}</label>
-    <input type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\" />
-
-    <label for=\"password\">{{ 'security.login.password'|trans }}</label>
-    <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" />
-
-    <input type=\"checkbox\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
-    <label for=\"remember_me\">{{ 'security.login.remember_me'|trans }}</label>
-
-    <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"{{ 'security.login.submit'|trans }}\" />
+    <div class=\"form-group\">
+        <label for=\"username\">{{ 'security.login.username'|trans }}</label>
+        <input type=\"text\" id=\"username\" class=\"form-control\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\" />
+    </div>
+    <div class=\"form-group\">
+        <label for=\"password\">{{ 'security.login.password'|trans }}</label>
+        <input type=\"password\" id=\"password\" class=\"form-control\" name=\"_password\" required=\"required\" />
+    </div>
+    <div class=\"checkbox\">
+        <label for=\"remember_me\"><input type=\"checkbox\" id=\"remember_me\" class=\"form-control\" name=\"_remember_me\" value=\"on\" />{{ 'security.login.remember_me'|trans }}</label>
+    </div>
+    <div>
+        <input type=\"submit\" id=\"_submit\" class=\"btn btn-success\" name=\"_submit\" value=\"{{ 'security.login.submit'|trans }}\" />
+    </div>
 </form>
 ", "FOSUserBundle:Security:login_content.html.twig", "/home/krystian/Workspace/diyoh/app/Resources/FOSUserBundle/views/Security/login_content.html.twig");
     }

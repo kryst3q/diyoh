@@ -1,0 +1,7 @@
+{% block body %}
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="{{ url('diyoh_project_showproject',{'id':project.id}) }}">Project</a></li>
+      <li role="presentation"><a href="{{ url('diyoh_project_showprojectcomments',{'id':project.id}) }}">Comments</a></li>
+      <li role="presentation"><a href="{{ url('diyoh_project_showprojectdiscussions',{'id':project.id}) }}">Discussion</a></li>
+    </ul>
+{% endblock %}

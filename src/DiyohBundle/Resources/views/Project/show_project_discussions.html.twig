@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Project:showProject{% endblock %}
+
+{% block body %}
+
+    {% include('DiyohBundle:Project:project_navbar.html.twig') %}
+    
+    {% if is_granted('ROLE_USER') %}
+    
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    
+    {% endif %}
+    
+    {% for discussion in discussions %}
+
+        <hr>
+        <a href="{{ url('diyoh_project_showdiscussion', { 'projId' : project.id, 'discId' : discussion.id }) }}"><p>{{ discussion.title }}</p></a>
+
+    {% endfor %}
+        
+    
+    
+{% endblock %}

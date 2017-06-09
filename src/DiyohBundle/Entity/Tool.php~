@@ -36,6 +36,11 @@ class Tool
     private $description;
     
     /**
+     * @ORM\Column(name="images", type="array", nullable=true)
+     */
+    private $images;
+    
+    /**
      * @ORM\ManyToMany(targetEntity="Project", mappedBy="tools")
      * @var type 
      */
@@ -183,5 +188,38 @@ class Tool
     public function getCategories()
     {
         return $this->categories;
+    }
+
+    /**
+     * Add tags
+     *
+     * @param \DiyohBundle\Entity\Tag $tags
+     * @return Tool
+     */
+    public function addTag(\DiyohBundle\Entity\Tag $tags)
+    {
+        $this->tags[] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Remove tags
+     *
+     * @param \DiyohBundle\Entity\Tag $tags
+     */
+    public function removeTag(\DiyohBundle\Entity\Tag $tags)
+    {
+        $this->tags->removeElement($tags);
+    }
+
+    /**
+     * Get tags
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTags()
+    {
+        return $this->tags;
     }
 }

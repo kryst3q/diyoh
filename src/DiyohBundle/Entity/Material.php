@@ -51,6 +51,11 @@ class Material
     private $specyfication;
 
     /**
+     * @ORM\Column(name="images", type="array", nullable=true)
+     */
+    private $images;
+    
+    /**
      * @ORM\ManyToMany(targetEntity="Project", mappedBy="materials")
      * @var type 
      */
@@ -195,5 +200,28 @@ class Material
     public function getProjects()
     {
         return $this->projects;
+    }
+
+    /**
+     * Set images
+     *
+     * @param array $images
+     * @return Material
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+
+        return $this;
+    }
+
+    /**
+     * Get images
+     *
+     * @return array 
+     */
+    public function getImages()
+    {
+        return $this->images;
     }
 }

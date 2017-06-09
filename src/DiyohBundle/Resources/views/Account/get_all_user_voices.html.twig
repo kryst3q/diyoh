@@ -4,8 +4,57 @@
 
 {% block body %}
 
-    {% for voice in voices %}
-        <p>{{ voice.text }}</p>
-    {% endfor %}
-    
+    <div class="container">
+
+        <div class="row">
+
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Account</a></li>
+                <li class="active">Voices</li>
+            </ol>
+
+            <div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                Voice
+                            </th>
+                            <th>
+                                Project
+                            </th>
+                            <th>
+                                Discussion
+                            </th>
+                            <th>
+                                Creation date
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for voice in voices %}
+                            <tr>
+                                <td>
+                                    {{ voice.text }}
+                                </td>
+                                <td>
+                                    <a href="{{ url('diyoh_project_showproject',{'id':voice.discussionId.projectId.id}) }}">{{ voice.discussionId.projectId.name }}</a>
+                                </td>
+                                <td>
+                                    <a href="{{ url('diyoh_project_showdiscussion',{'projId':voice.discussionId.projectId.id,'discId':voice.discussionId.id}) }}">{{ voice.discussionId.title }}</a>
+                                </td>
+                                <td>
+                                    {{ voice.sendDatetime.date }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}

@@ -7,6 +7,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use DiyohBundle\Entity\Message;
+use DiyohBundle\Entity\Comment;
+use DiyohBundle\Entity\Discussion;
+use DiyohBundle\Entity\Voice;
 
 class ProjectController extends Controller
 {
@@ -15,10 +18,6 @@ class ProjectController extends Controller
      */
     public function showMainCategoriesAction()
     {
-//        $categories = $this->getDoctrine()->getRepository('DiyohBundle:Category')->findBy([
-//           'overriding' => $this->getDoctrine()->getRepository('DiyohBundle:Category')->findOneById(1)
-//        ]);
-        
         $categories = $this->getDoctrine()->getRepository('DiyohBundle:Category')->findOneById(1);
         
         return $this->render('DiyohBundle:Project:show_main_categories.html.twig', array(
@@ -138,20 +137,205 @@ class ProjectController extends Controller
     public function showProjectAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $project = $em->getRepository("DiyohBundle:Project")->findById($id);
+        $project = $em->getRepository("DiyohBundle:Project")->findOneById($id);
+
+        $user = $em->getRepository("DiyohBundle:User")->findById($this->getUser());
         
-        
+        if (!empty($user)) {
+            
+            $favProjects = $user[0]->getFavouriteProjects();
+            $favProject = FALSE;
+
+            foreach ($favProjects as $favourite) {
+
+                if ($favourite->getId() == $id) {
+
+                    $favProject = TRUE;
+
+                }
+
+            }
+            
+            return $this->render('DiyohBundle:Project:show_project.html.twig', array(
+                'project' => $project,
+                'favproj' => $favProject
+            ));
+            
+        }
         
         return $this->render('DiyohBundle:Project:show_project.html.twig', array(
-            'project' => $project[0]
+            'project' => $project,
         ));
+    }
+    
+    /**
+     * @Route("/favourite/{id}/{addOrRm}")
+     */
+    public function favouriteAction($id, $addOrRm) {
+        
+        $em = $this->getDoctrine()->getManager();
+        
+        $project = $em->getRepository("DiyohBundle:Project")->findById($id);
+        $user = $em->getRepository("DiyohBundle:User")->findById($this->getUser());
+      
+        if ($addOrRm == 'rm') {
+            
+            $project[0]->removeUser($user[0]);
+            
+        } else {
+            
+            $project[0]->addUser($user[0]);
+            
+        }
+        
+        $em->persist($project[0]);
+        $em->flush();
+            
+        return $this->redirectToRoute('diyoh_project_showproject',array('id' => $id));
+        
+    }
+    
+    /**
+     * @Route("/project/{id}/comments")
+     */
+    public function showProjectCommentsAction($id, Request $request) {
+        
+        $em = $this->getDoctrine()->getManager();
+        
+        $comments = $em->getRepository("DiyohBundle:Comment")->findByProjectId($id);
+        $project = $em->getRepository("DiyohBundle:Project")->findById($id);
+        
+        $comment = new Comment();
+        $comment->setProjectId($project[0]);
+        $comment->setAuthorId($this->getUser());
+        $form = $this->createFormBuilder($comment)
+                ->add('text','text')
+                ->add('comment','submit')
+                ->getForm();
+        
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted()) {
+            
+            $comment = $form->getData();
+            
+            $datetime = new \DateTime();
+            $datetime->format('Y-m-d H:i:s');
+            
+            $comment->setSendDatetime($datetime);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($comment);
+            $em->flush();
+            
+            return $this->redirectToRoute('diyoh_project_showprojectcomments',array('id' => $id));
+            
+        }
+        
+        return $this->render('DiyohBundle:Project:show_project_comments.html.twig', array(
+            'project' => $project[0],
+            'comments' => $comments,
+            'form' => $form->createView()
+        ));
+    }
+    
+    /**
+     * @Route("/project/{id}/discussions")
+     */
+    public function showProjectDiscussionsAction($id, Request $request) {
+        
+        $em = $this->getDoctrine()->getManager();
+        $discussions = $em->getRepository("DiyohBundle:Discussion")->findByProjectId($id);
+        $project = $em->getRepository("DiyohBundle:Project")->findById($id);
+        
+        $discussion = new Discussion();
+        $discussion->setProjectId($project[0]);
+        $discussion->setAuthorId($this->getUser());
+        $form = $this->createFormBuilder($discussion)
+                ->add('title','text')
+                ->add('create','submit')
+                ->getForm();
+        
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted()) {
+            
+            $discussion = $form->getData();
+            
+            $datetime = new \DateTime();
+            $datetime->format('Y-m-d H:i:s');
+            
+            $discussion->setStartDatetime($datetime);
+
+            $em->persist($discussion);
+            $em->flush();
+            
+            return $this->redirectToRoute('diyoh_project_showprojectdiscussions',array(
+                'id' => $id
+            ));
+            
+        }
+        
+        return $this->render('DiyohBundle:Project:show_project_discussions.html.twig', array(
+            'project' => $project[0],
+            'discussions' => $discussions,
+            'form' => $form->createView()
+        ));
+    }
+    
+    /**
+     * @Route("project/{projId}/discussion/{discId}")
+     */
+    public function showDiscussionAction($projId, $discId, Request $request) {
+        
+        $em = $this->getDoctrine()->getManager();
+        
+        $project = $em->getRepository("DiyohBundle:Project")->findById($projId);
+        $discussion = $em->getRepository("DiyohBundle:Discussion")->findById($discId);
+        $voices = $em->getRepository("DiyohBundle:Voice")->findByDiscussionId($discId);
+        
+        $voice = new Voice();
+        $voice->setDiscussionId($discussion[0]);
+        $voice->setAuthorId($this->getUser());
+        $form = $this->createFormBuilder($voice)
+                ->add('text','text')
+                ->add('send','submit')
+                ->getForm();
+        
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted()) {
+            
+            $voice = $form->getData();
+            
+            $datetime = new \DateTime();
+            $datetime->format('Y-m-d H:i:s');
+            
+            $voice->setSendDatetime($datetime);
+
+            $em->persist($voice);
+            $em->flush();
+            
+            return $this->redirectToRoute('diyoh_project_showdiscussion',array(
+                'projId' => $projId,
+                'discId' => $discId
+            ));
+        }
+        
+        return $this->render('DiyohBundle:Project:show_project_discussion.html.twig', array(
+            'project' => $project[0],
+            'form' => $form->createView(),
+            'voices' => $voices,
+            'discussion' => $discussion[0]
+        ));
+        
     }
     
     /**
      * @Route("/user/{id}")
      * @Method({"GET","POST"})
      */
-    public function showInfoAboutOtherUser($id, Request $request) {
+    public function showInfoAboutOtherUserAction($id, Request $request) {
         
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository("DiyohBundle:User")->findById($id);

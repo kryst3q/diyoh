@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Project:showProject{% endblock %}
+
+{% block body %}
+
+    {% include('DiyohBundle:Project:project_navbar.html.twig') %}
+    
+    <hr>
+    
+    <h4>{{ discussion.title }}</h4>
+    
+    <hr>
+    
+    {% if is_granted('ROLE_USER') %}
+    
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    
+    {% endif %}
+    
+        
+    {% for voice in voices %}
+
+        <hr>
+        <p>{{ voice.authorId }}</p>
+        <p>{{ voice.text }}</p>
+
+    {% endfor %}
+        
+    
+    
+{% endblock %}

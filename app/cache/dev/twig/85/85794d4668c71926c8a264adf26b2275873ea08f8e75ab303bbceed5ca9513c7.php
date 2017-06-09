@@ -15,22 +15,29 @@ class __TwigTemplate_9e2b94d5bc4738856de8f33d0bba4b1bdbcf8d3fc6e756671e8bed2105b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2b563a64b4f1396aa5b34d98f684e579c1fbcdf20749d59dbb00abd4d2eaa24b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2b563a64b4f1396aa5b34d98f684e579c1fbcdf20749d59dbb00abd4d2eaa24b->enter($__internal_2b563a64b4f1396aa5b34d98f684e579c1fbcdf20749d59dbb00abd4d2eaa24b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:messagebar.html.twig"));
+        $__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4->enter($__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:messagebar.html.twig"));
 
         // line 1
-        echo "<ul class=\"nav nav-tabs nav-justified\">
-    <li role=\"presentation\"><a href=\"";
-        // line 2
+        echo "<div class=\"sidebar-nav col-md-2\">
+    <div class=\"navbar navbar-default\" role=\"navigation\">
+        <div class=\"navbar-collapse collapse sidebar-navbar-collapse\">
+            <ul class=\"nav navbar-nav\">
+                <li role=\"presentation\"><a href=\"";
+        // line 5
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_getreceivedmessages");
         echo "\">Received</a></li>
-    <li role=\"presentation\"><a href=\"";
-        // line 3
+                <li role=\"presentation\"><a href=\"";
+        // line 6
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_getsentmessages");
         echo "\">Sent</a></li>
-</ul>";
+            </ul>
+        </div>
+    </div>
+</div>
+";
         
-        $__internal_2b563a64b4f1396aa5b34d98f684e579c1fbcdf20749d59dbb00abd4d2eaa24b->leave($__internal_2b563a64b4f1396aa5b34d98f684e579c1fbcdf20749d59dbb00abd4d2eaa24b_prof);
+        $__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4->leave($__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4_prof);
 
     }
 
@@ -46,7 +53,7 @@ class __TwigTemplate_9e2b94d5bc4738856de8f33d0bba4b1bdbcf8d3fc6e756671e8bed2105b
 
     public function getDebugInfo()
     {
-        return array (  29 => 3,  25 => 2,  22 => 1,);
+        return array (  32 => 6,  28 => 5,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -59,9 +66,19 @@ class __TwigTemplate_9e2b94d5bc4738856de8f33d0bba4b1bdbcf8d3fc6e756671e8bed2105b
 
     public function getSourceContext()
     {
-        return new Twig_Source("<ul class=\"nav nav-tabs nav-justified\">
+        return new Twig_Source("<div class=\"sidebar-nav col-md-2\">
+    <div class=\"navbar navbar-default\" role=\"navigation\">
+        <div class=\"navbar-collapse collapse sidebar-navbar-collapse\">
+            <ul class=\"nav navbar-nav\">
+                <li role=\"presentation\"><a href=\"{{ url(\"diyoh_account_getreceivedmessages\") }}\">Received</a></li>
+                <li role=\"presentation\"><a href=\"{{ url(\"diyoh_account_getsentmessages\") }}\">Sent</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{#<ul class=\"nav nav-pills nav-stacked\">
     <li role=\"presentation\"><a href=\"{{ url(\"diyoh_account_getreceivedmessages\") }}\">Received</a></li>
     <li role=\"presentation\"><a href=\"{{ url(\"diyoh_account_getsentmessages\") }}\">Sent</a></li>
-</ul>", "DiyohBundle:Account:messagebar.html.twig", "/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Account/messagebar.html.twig");
+</ul>#}", "DiyohBundle:Account:messagebar.html.twig", "/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Account/messagebar.html.twig");
     }
 }

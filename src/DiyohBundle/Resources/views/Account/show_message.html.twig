@@ -4,10 +4,25 @@
 
 {% block body %}
 
-    <p>{{ message.title }}</p>
-    <p>{{ message.text }}</p>
-    <p>{{ message.sendDatetime.date }}</p>
-    <p>{{ message.authorId.username }}</p>
-    <p>{{ message.recipientId.username }}</p>
+    <div class="container">
+        <div class="row">
+
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Messages</a></li>
+                <li class="active">Message</li>
+            </ol>
+
+            <div class="panel panel-default">
+                <div class="panel-heading"><small style="color: #777">Title:</small> {{ message.title }} <small style="color: #777">||</small> <small style="color: #777">Author:</small> {{ message.authorId.username }} <small style="color: #777">||</small> <small style="color: #777">Recipient:</small> {{ message.recipientId.username }}</div>
+                <div class="panel-body">
+                    <p>{{ message.text }}</p>
+                </div>
+                <div class="panel-footer"><small style="color: #777">Send date:</small> {{ message.sendDatetime.date }}</div>
+            </div>
+
+        </div>
+    </div>
 
 {% endblock %}

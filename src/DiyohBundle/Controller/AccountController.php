@@ -155,7 +155,7 @@ class AccountController extends Controller
         $project = new Project();
         $form = $this->createFormBuilder($project)
                 ->add('name','text')
-                ->add('description','text')
+                ->add('description','textarea')
                 ->add('materials', 'entity', array(
                     'class' => 'DiyohBundle:Material',
                     'choice_label' => 'name',
@@ -180,7 +180,7 @@ class AccountController extends Controller
                     'multiple' => true,
                     'expanded' => true,
                 ))
-                ->add('instruction','text')
+                ->add('instruction','textarea')
                 ->add('imagesPaths', FileType::class, array(
                     'label' => 'Upload images',
                     'multiple' => true,

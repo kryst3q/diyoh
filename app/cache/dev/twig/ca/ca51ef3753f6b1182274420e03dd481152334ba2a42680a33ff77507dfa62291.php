@@ -22,64 +22,94 @@ class __TwigTemplate_74fdfbacd9e40199674a4ea61d3ec656a58d318319c9e0d3491821898c7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_be46bfe85fc744993d68cf8fe7504c7fe2e01bed15aa5ff323fc9fbced56e858 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_be46bfe85fc744993d68cf8fe7504c7fe2e01bed15aa5ff323fc9fbced56e858->enter($__internal_be46bfe85fc744993d68cf8fe7504c7fe2e01bed15aa5ff323fc9fbced56e858_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:get_all_user_projects.html.twig"));
+        $__internal_4d31666e07b1c4a6a927bd6f80b3af4d15fd50855bada4acfa970fd5387b35a1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4d31666e07b1c4a6a927bd6f80b3af4d15fd50855bada4acfa970fd5387b35a1->enter($__internal_4d31666e07b1c4a6a927bd6f80b3af4d15fd50855bada4acfa970fd5387b35a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:get_all_user_projects.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_be46bfe85fc744993d68cf8fe7504c7fe2e01bed15aa5ff323fc9fbced56e858->leave($__internal_be46bfe85fc744993d68cf8fe7504c7fe2e01bed15aa5ff323fc9fbced56e858_prof);
+        $__internal_4d31666e07b1c4a6a927bd6f80b3af4d15fd50855bada4acfa970fd5387b35a1->leave($__internal_4d31666e07b1c4a6a927bd6f80b3af4d15fd50855bada4acfa970fd5387b35a1_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_0c30b6fcdb3c34cec03136a86963eb467d768299f43191c17f0c94ed5542c012 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0c30b6fcdb3c34cec03136a86963eb467d768299f43191c17f0c94ed5542c012->enter($__internal_0c30b6fcdb3c34cec03136a86963eb467d768299f43191c17f0c94ed5542c012_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_86d7484520eadb5d1fb4a6e3c487a1a9aac934c0e46bc7f2d492a70b7fa039c4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_86d7484520eadb5d1fb4a6e3c487a1a9aac934c0e46bc7f2d492a70b7fa039c4->enter($__internal_86d7484520eadb5d1fb4a6e3c487a1a9aac934c0e46bc7f2d492a70b7fa039c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Account:getAllUserProjects";
         
-        $__internal_0c30b6fcdb3c34cec03136a86963eb467d768299f43191c17f0c94ed5542c012->leave($__internal_0c30b6fcdb3c34cec03136a86963eb467d768299f43191c17f0c94ed5542c012_prof);
+        $__internal_86d7484520eadb5d1fb4a6e3c487a1a9aac934c0e46bc7f2d492a70b7fa039c4->leave($__internal_86d7484520eadb5d1fb4a6e3c487a1a9aac934c0e46bc7f2d492a70b7fa039c4_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9fc46c564e3d1d2d944fa772a4e65f31b25ddbeffb4ed0eb208d00ff206c14a4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9fc46c564e3d1d2d944fa772a4e65f31b25ddbeffb4ed0eb208d00ff206c14a4->enter($__internal_9fc46c564e3d1d2d944fa772a4e65f31b25ddbeffb4ed0eb208d00ff206c14a4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_180fb56b98c57e1021dc21e183180399a8c9e7062198f43a0c41d0873f619063 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_180fb56b98c57e1021dc21e183180399a8c9e7062198f43a0c41d0873f619063->enter($__internal_180fb56b98c57e1021dc21e183180399a8c9e7062198f43a0c41d0873f619063_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
-    <a href=\"";
-        // line 7
+    <div class=\"container\">
+
+        <ol class=\"breadcrumb\">
+            <li><a href=\"#\">Home</a></li>
+            <li><a href=\"#\">Account</a></li>
+            <li class=\"active\">My projects</li>
+        </ol>
+
+        <div class=\"row\">
+            <div class=\"col-md-4\"></div>
+            <div class=\"col-md-4\">
+                <a href=\"";
+        // line 18
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_account_addnewproject");
-        echo "\">Add new project</a>
-    
-    ";
-        // line 9
+        echo "\"><button class=\"btn btn-success\">Add new project</button></a>
+
+                <hr>
+
+                <table class=\"table table-hover\">
+                    <thead>
+                        <tr>
+                            <th>
+                                Title
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ";
+        // line 31
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "projects", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
-            // line 10
-            echo "
-        <a href=\"";
-            // line 11
+            // line 32
+            echo "                            <tr>
+                                <td>
+                                    <a href=\"";
+            // line 34
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showproject", array("id" => $this->getAttribute($context["project"], "id", array()))), "html", null, true);
-            echo "\"><p>";
+            echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["project"], "name", array()), "html", null, true);
-            echo "</p></a>
-        
-    ";
+            echo "</a>
+                                </td>
+                            </tr>
+                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['project'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 14
-        echo "    
+        // line 38
+        echo "                    </tbody>
+                </table>
+            </div>
+            <div class=\"col-md-4\"></div>
+        </div>  
+    </div>
+
 ";
         
-        $__internal_9fc46c564e3d1d2d944fa772a4e65f31b25ddbeffb4ed0eb208d00ff206c14a4->leave($__internal_9fc46c564e3d1d2d944fa772a4e65f31b25ddbeffb4ed0eb208d00ff206c14a4_prof);
+        $__internal_180fb56b98c57e1021dc21e183180399a8c9e7062198f43a0c41d0873f619063->leave($__internal_180fb56b98c57e1021dc21e183180399a8c9e7062198f43a0c41d0873f619063_prof);
 
     }
 
@@ -95,7 +125,7 @@ class __TwigTemplate_74fdfbacd9e40199674a4ea61d3ec656a58d318319c9e0d3491821898c7
 
     public function getDebugInfo()
     {
-        return array (  79 => 14,  68 => 11,  65 => 10,  61 => 9,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  103 => 38,  91 => 34,  87 => 32,  83 => 31,  67 => 18,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -114,14 +144,44 @@ class __TwigTemplate_74fdfbacd9e40199674a4ea61d3ec656a58d318319c9e0d3491821898c7
 
 {% block body %}
 
-    <a href=\"{{ url('diyoh_account_addnewproject') }}\">Add new project</a>
-    
-    {% for project in app.user.projects %}
+    <div class=\"container\">
 
-        <a href=\"{{ url('diyoh_project_showproject',{'id':project.id}) }}\"><p>{{ project.name }}</p></a>
-        
-    {% endfor %}
-    
+        <ol class=\"breadcrumb\">
+            <li><a href=\"#\">Home</a></li>
+            <li><a href=\"#\">Account</a></li>
+            <li class=\"active\">My projects</li>
+        </ol>
+
+        <div class=\"row\">
+            <div class=\"col-md-4\"></div>
+            <div class=\"col-md-4\">
+                <a href=\"{{ url('diyoh_account_addnewproject') }}\"><button class=\"btn btn-success\">Add new project</button></a>
+
+                <hr>
+
+                <table class=\"table table-hover\">
+                    <thead>
+                        <tr>
+                            <th>
+                                Title
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for project in app.user.projects %}
+                            <tr>
+                                <td>
+                                    <a href=\"{{ url('diyoh_project_showproject',{'id':project.id}) }}\">{{ project.name }}</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class=\"col-md-4\"></div>
+        </div>  
+    </div>
+
 {% endblock %}
 ", "DiyohBundle:Account:get_all_user_projects.html.twig", "/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Account/get_all_user_projects.html.twig");
     }

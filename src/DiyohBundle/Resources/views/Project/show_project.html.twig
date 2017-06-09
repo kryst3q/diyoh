@@ -4,43 +4,110 @@
 
 {% block body %}
 
-    <p>{{ project.id }}</p>
-    <p>{{ project.name }}</p>
-    <a href="{{ url("diyoh_project_showinfoaboutotheruser",{'id':project.authorId.id}) }}"><p>{{ project.authorId }}</p></a>
-    <p>{{ project.description }}</p>
-    
-    <hr>
-    
-    {% for tag in project.tags %}
-        
-        <a href="{{ url("diyoh_project_showtaglinks",{'id':tag.id}) }}"><span class="badge">{{ tag.name }}</span>
-            
-    {% endfor %}
-    
-    <hr>
-    
-    {% for tool in project.tools %}
-        
-        <a href="{{ url("diyoh_project_showtool",{'id':tool.id}) }}"><p>{{ tool.name }}</p></a>
-        
-    {% endfor %}
-    
-    <hr>
-    
-    {% for material in project.materials %}
-        
-        <a href="{{ url("diyoh_project_showmaterial",{'id':material.id}) }}"><p>{{ material.name }}</p></a>
-        
-    {% endfor %}
-    
-    {% if project.imagesPaths != null %}
-        
-        {% for imagePath in project.imagesPaths %}
-        
-            <img src="{{ asset('images/' ~ imagePath) }}">
-        
-        {% endfor %}
-        
-    {% endif %}
-    
+    <div class="container">
+
+        {% include('DiyohBundle:Project:project_navbar.html.twig') %}
+
+        {% if favproj is defined %}
+
+            {% if favproj %}
+
+                <a href="{{ url('diyoh_project_favourite',{'id':project.id,'addOrRm':'rm'}) }}"><span class="glyphicon glyphicon-remove-sign"></span> remove from favourites</a>
+
+            {% elseif project.authorId.id != app.user.id %}
+
+                <a href="{{ url('diyoh_project_favourite',{'id':project.id,'addOrRm':'add'}) }}"><span class="glyphicon glyphicon-heart"></span> add to favourites</a>
+
+            {% endif %}
+
+        {% endif %}
+
+        <p>{{ project.id }}</p>
+        <p>{{ project.name }}</p>
+        <a href="{{ url("diyoh_project_showinfoaboutotheruser",{'id':project.authorId.id}) }}"><p>{{ project.authorId }}</p></a>
+        <p>{{ project.description }}</p>
+
+        <div class="row">
+
+            <div class="page-header">
+
+                <h4>Tags</h4>
+
+            </div>
+
+            <div>
+                {% for tag in project.tags %}
+
+                    <a href="{{ url("diyoh_project_showtaglinks",{'id':tag.id}) }}"><span class="badge">{{ tag.name }}</span>
+
+                    {% endfor %}
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="page-header">
+
+                <h4>Tools</h4>
+
+            </div>
+
+            <div class="list-group">
+
+                {% for tool in project.tools %}
+
+                    <a href="{{ url("diyoh_project_showtool",{'id':tool.id}) }}" class="list-group-item"><p>{{ tool.name }}</p></a>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="page-header">
+
+                <h4>Materials</h4>
+
+            </div>
+
+            <div class="list-group">
+
+                {% for material in project.materials %}
+
+                    <a href="{{ url("diyoh_project_showmaterial",{'id':material.id}) }}" class="list-group-item"><p>{{ material.name }}</p></a>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        {% if project.imagesPaths != null %}
+
+            <div class="row">
+
+                <div class="page-header">
+                    <h4>Images</h4>
+                </div>
+
+                {% for imagePath in project.imagesPaths %}
+
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="{{ asset('images/' ~ imagePath) }}">
+                        </a>
+                    </div>
+
+
+                {% endfor %}
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
 {% endblock %}

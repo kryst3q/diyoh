@@ -1,0 +1,18 @@
+{% macro field(element, hr = true) %}
+
+    {{ form_label(element) }}
+    <div class="row">
+        {% for el in element.children %}
+            <div class="col-lg-3">
+                {{ form_row(el) }}
+            </div>
+        {% endfor %}
+    </div>
+    
+    {% if hr %}
+        
+        <hr>
+        
+    {% endif %}
+
+{% endmacro %}

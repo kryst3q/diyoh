@@ -267,6 +267,29 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // diyoh_project_favourite
+        if (0 === strpos($pathinfo, '/favourite') && preg_match('#^/favourite/(?P<id>[^/]++)/(?P<addOrRm>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_favourite')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::favouriteAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/project')) {
+            // diyoh_project_showprojectcomments
+            if (preg_match('#^/project/(?P<id>[^/]++)/comments$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showprojectcomments')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showProjectCommentsAction',));
+            }
+
+            // diyoh_project_showprojectdiscussions
+            if (preg_match('#^/project/(?P<id>[^/]++)/discussions$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showprojectdiscussions')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showProjectDiscussionsAction',));
+            }
+
+            // diyoh_project_showdiscussion
+            if (preg_match('#^/project/(?P<projId>[^/]++)/discussion/(?P<discId>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showdiscussion')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showDiscussionAction',));
+            }
+
+        }
+
         // diyoh_project_showinfoaboutotheruser
         if (0 === strpos($pathinfo, '/user') && preg_match('#^/user/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
@@ -274,7 +297,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 goto not_diyoh_project_showinfoaboutotheruser;
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showinfoaboutotheruser')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showInfoAboutOtherUser',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showinfoaboutotheruser')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showInfoAboutOtherUserAction',));
         }
         not_diyoh_project_showinfoaboutotheruser:
 

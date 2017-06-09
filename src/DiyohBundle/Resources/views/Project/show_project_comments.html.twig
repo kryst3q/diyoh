@@ -1,0 +1,28 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Project:showProject{% endblock %}
+
+{% block body %}
+
+    {% include('DiyohBundle:Project:project_navbar.html.twig') %}
+    
+    {% if is_granted('ROLE_USER') %}
+    
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    
+    {% endif %}
+    
+        
+    {% for comment in comments %}
+
+        <hr>
+        <p>{{ comment.authorId }}</p>
+        <p>{{ comment.text }}</p>
+
+    {% endfor %}
+        
+    
+    
+{% endblock %}

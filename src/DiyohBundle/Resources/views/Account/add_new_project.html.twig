@@ -1,11 +1,38 @@
 {% extends "::base.html.twig" %}
+{% from 'DiyohBundle:macro:horizontal_form.html.twig' import field %}
 
 {% block title %}DiyohBundle:Account:showMessagesMenu{% endblock %}
 
 {% block body %}
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {{ form_end(form) }}
+    <div class="container">
+
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Favourite projects</a></li>
+                <li class="active">Add new project</li>
+            </ol>
+        </div>
+
+        <div class="row">
+            {{ form_start(form) }}
+            {{ form_row(form.name) }}
+            {{ form_row(form.description) }}
+        </div>
+
+        {{ field(form.materials) }}
+        {{ field(form.tools) }}
+        {{ field(form.categories) }}
+        {{ field(form.tags) }}
+
+        <div class="row">
+            {{ form_row(form.instruction) }}
+            {{ form_row(form.imagesPaths) }}
+            {{ form_end(form) }}
+        </div>
+
+    </div>
 
 {% endblock %}

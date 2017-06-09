@@ -39,7 +39,7 @@ class User extends BaseUser
     
     /**
      * @ORM\ManyToMany(targetEntity="Project", mappedBy="users")
-     * @var type 
+     * 
      */
     private $favouriteProjects;
     

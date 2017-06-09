@@ -15,8 +15,8 @@ class __TwigTemplate_962656c980fdb7d1bed962e8da9db5591326ca33621c19374d42ad6da85
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1977e999aa6566626d0d7f9fada266741c3c902fecd6d02227fb816d6682d71b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1977e999aa6566626d0d7f9fada266741c3c902fecd6d02227fb816d6682d71b->enter($__internal_1977e999aa6566626d0d7f9fada266741c3c902fecd6d02227fb816d6682d71b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::navbar.html.twig"));
+        $__internal_62d591ac29beea715be2cc7d6dd4fc869f03cca7debf8dbf74d8fd4f5193be83 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_62d591ac29beea715be2cc7d6dd4fc869f03cca7debf8dbf74d8fd4f5193be83->enter($__internal_62d591ac29beea715be2cc7d6dd4fc869f03cca7debf8dbf74d8fd4f5193be83_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::navbar.html.twig"));
 
         // line 1
         echo "<nav class=\"navbar navbar-default\">
@@ -127,7 +127,7 @@ class __TwigTemplate_962656c980fdb7d1bed962e8da9db5591326ca33621c19374d42ad6da85
             // line 51
             echo "                    <li class=\"dropdown\">
                         <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>
-                        <ul class=\"dropdown-menu\">
+                        <ul class=\"dropdown-menu\" style=\"padding: 20px; width: 300px\">
                             <li>";
             // line 54
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("FOSUserBundle:Security:login"));
@@ -146,7 +146,7 @@ class __TwigTemplate_962656c980fdb7d1bed962e8da9db5591326ca33621c19374d42ad6da85
     </div><!-- /.container-fluid -->
 </nav>";
         
-        $__internal_1977e999aa6566626d0d7f9fada266741c3c902fecd6d02227fb816d6682d71b->leave($__internal_1977e999aa6566626d0d7f9fada266741c3c902fecd6d02227fb816d6682d71b_prof);
+        $__internal_62d591ac29beea715be2cc7d6dd4fc869f03cca7debf8dbf74d8fd4f5193be83->leave($__internal_62d591ac29beea715be2cc7d6dd4fc869f03cca7debf8dbf74d8fd4f5193be83_prof);
 
     }
 
@@ -227,7 +227,7 @@ class __TwigTemplate_962656c980fdb7d1bed962e8da9db5591326ca33621c19374d42ad6da85
                 {% else %}
                     <li class=\"dropdown\">
                         <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>
-                        <ul class=\"dropdown-menu\">
+                        <ul class=\"dropdown-menu\" style=\"padding: 20px; width: 300px\">
                             <li>{{ render(controller('FOSUserBundle:Security:login')) }}</li>
                             <a href=\"{{ url(\"diyoh_default_signup\") }}\">Zarejestruj się</a>
                         </ul>

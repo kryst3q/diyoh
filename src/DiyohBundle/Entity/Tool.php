@@ -36,6 +36,11 @@ class Tool
     private $description;
     
     /**
+     * @ORM\Column(name="images", type="array", nullable=true)
+     */
+    private $images;
+    
+    /**
      * @ORM\ManyToMany(targetEntity="Project", mappedBy="tools")
      * @var type 
      */
@@ -216,5 +221,28 @@ class Tool
     public function getTags()
     {
         return $this->tags;
+    }
+
+    /**
+     * Set images
+     *
+     * @param array $images
+     * @return Tool
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+
+        return $this;
+    }
+
+    /**
+     * Get images
+     *
+     * @return array 
+     */
+    public function getImages()
+    {
+        return $this->images;
     }
 }

@@ -22,32 +22,32 @@ class __TwigTemplate_ec644f36ebcd7fd56122ed25fdad09ffbb7a55a1202081b29e2de47eece
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a4972b41d5dd276ae32fac18d6940f9b2dd156e83d0e214d0e28ff4ee9ca8cbb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a4972b41d5dd276ae32fac18d6940f9b2dd156e83d0e214d0e28ff4ee9ca8cbb->enter($__internal_a4972b41d5dd276ae32fac18d6940f9b2dd156e83d0e214d0e28ff4ee9ca8cbb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_projects.html.twig"));
+        $__internal_bbde2fc9b508852a4017e338347de9972bd1e6288305ae1c65206d7fee6923c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bbde2fc9b508852a4017e338347de9972bd1e6288305ae1c65206d7fee6923c0->enter($__internal_bbde2fc9b508852a4017e338347de9972bd1e6288305ae1c65206d7fee6923c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_projects.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a4972b41d5dd276ae32fac18d6940f9b2dd156e83d0e214d0e28ff4ee9ca8cbb->leave($__internal_a4972b41d5dd276ae32fac18d6940f9b2dd156e83d0e214d0e28ff4ee9ca8cbb_prof);
+        $__internal_bbde2fc9b508852a4017e338347de9972bd1e6288305ae1c65206d7fee6923c0->leave($__internal_bbde2fc9b508852a4017e338347de9972bd1e6288305ae1c65206d7fee6923c0_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_ad8884b8cb225179c8b0bf860b28af0d2f95ebf7d488aa715f6d78e2001f2f4f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ad8884b8cb225179c8b0bf860b28af0d2f95ebf7d488aa715f6d78e2001f2f4f->enter($__internal_ad8884b8cb225179c8b0bf860b28af0d2f95ebf7d488aa715f6d78e2001f2f4f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_db2963a39afc9b9ffe17416d8de8e340bbe358961658c96c13f8872ad5132b2e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_db2963a39afc9b9ffe17416d8de8e340bbe358961658c96c13f8872ad5132b2e->enter($__internal_db2963a39afc9b9ffe17416d8de8e340bbe358961658c96c13f8872ad5132b2e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Project:showProjects";
         
-        $__internal_ad8884b8cb225179c8b0bf860b28af0d2f95ebf7d488aa715f6d78e2001f2f4f->leave($__internal_ad8884b8cb225179c8b0bf860b28af0d2f95ebf7d488aa715f6d78e2001f2f4f_prof);
+        $__internal_db2963a39afc9b9ffe17416d8de8e340bbe358961658c96c13f8872ad5132b2e->leave($__internal_db2963a39afc9b9ffe17416d8de8e340bbe358961658c96c13f8872ad5132b2e_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_15ea10e57c30c48a00c6ac32962856f042db9306cbe979e31208c008404ae3cc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_15ea10e57c30c48a00c6ac32962856f042db9306cbe979e31208c008404ae3cc->enter($__internal_15ea10e57c30c48a00c6ac32962856f042db9306cbe979e31208c008404ae3cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d5cdaadeafe089675d8a88b7ce83a5f9f757b24ff1b39b816fe975afb6c29ac4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d5cdaadeafe089675d8a88b7ce83a5f9f757b24ff1b39b816fe975afb6c29ac4->enter($__internal_d5cdaadeafe089675d8a88b7ce83a5f9f757b24ff1b39b816fe975afb6c29ac4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -57,21 +57,24 @@ class __TwigTemplate_ec644f36ebcd7fd56122ed25fdad09ffbb7a55a1202081b29e2de47eece
         $context['_seq'] = twig_ensure_traversable(($context["projects"] ?? $this->getContext($context, "projects")));
         foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
             // line 8
-            echo "        <p><a href=\"";
+            echo "        
+        <p><a href=\"";
+            // line 9
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showproject", array("id" => $this->getAttribute($context["project"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["project"], "name", array()), "html", null, true);
             echo "</a></p>
+        
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['project'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 10
+        // line 12
         echo "    
 ";
         
-        $__internal_15ea10e57c30c48a00c6ac32962856f042db9306cbe979e31208c008404ae3cc->leave($__internal_15ea10e57c30c48a00c6ac32962856f042db9306cbe979e31208c008404ae3cc_prof);
+        $__internal_d5cdaadeafe089675d8a88b7ce83a5f9f757b24ff1b39b816fe975afb6c29ac4->leave($__internal_d5cdaadeafe089675d8a88b7ce83a5f9f757b24ff1b39b816fe975afb6c29ac4_prof);
 
     }
 
@@ -87,7 +90,7 @@ class __TwigTemplate_ec644f36ebcd7fd56122ed25fdad09ffbb7a55a1202081b29e2de47eece
 
     public function getDebugInfo()
     {
-        return array (  71 => 10,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  74 => 12,  63 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -107,7 +110,9 @@ class __TwigTemplate_ec644f36ebcd7fd56122ed25fdad09ffbb7a55a1202081b29e2de47eece
 {% block body %}
 
     {% for project in projects %}
+        
         <p><a href=\"{{ url(\"diyoh_project_showproject\",{'id':project.id}) }}\">{{ project.name }}</a></p>
+        
     {% endfor %}
     
 {% endblock %}

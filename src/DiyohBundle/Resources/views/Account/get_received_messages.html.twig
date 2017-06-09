@@ -4,16 +4,54 @@
 
 {% block body %}
 
-    {% include '/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Account/messagebar.html.twig' %}
-    
-    {% for message in messages %}
-        <a href="{{ url("diyoh_account_showmessage",{'id':message.id}) }}"><p>{{ message.title }}
-                {% if message.open %}
-                    <span class="glyphicon glyphicon-check"></span>
-                {% else %}
-                    <span class="glyphicon glyphicon-envelope"></span>
-                {% endif %}
-        </p></a>
-    {% endfor %}
-    
+    <div class="container">
+
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Messages</a></li>
+            <li class="active">Received</li>
+        </ol>
+
+        <div class="row">
+            {% include '/home/krystian/Workspace/diyoh/src/DiyohBundle/Resources/views/Account/messagebar.html.twig' %}
+
+            <div class="col-md-10">
+                <table class="table table-hover">
+                    <thead>
+                    <td>
+                        Title
+                    </td>
+                    <td>
+                        Status
+                    </td>
+                    <td>
+                        Date
+                    </td>
+                    </thead>
+                    <tbody>
+                        {% for message in messages %}
+                            <tr>
+                                <td>
+                                    <a href="{{ url("diyoh_account_showmessage",{'id':message.id}) }}"><p>{{ message.title }}</p></a>
+                                </td>
+                                <td>
+                                    {% if message.open %}
+                                        <span class="glyphicon glyphicon-check"></span>
+                                    {% else %}
+                                        <span class="glyphicon glyphicon-envelope"></span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {{ message.sendDatetime.date }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}
