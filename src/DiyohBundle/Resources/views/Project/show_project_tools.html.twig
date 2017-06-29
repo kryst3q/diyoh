@@ -1,0 +1,52 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}DiyohBundle:Project:showProject{% endblock %}
+
+{% block body %}
+
+    {% include('DiyohBundle:Project:project_navbar.html.twig') %}
+
+    <div class="container">
+        <div class="row">
+
+            {#<div class="page-header">
+
+                <h4>Tools</h4>
+
+            </div>#}
+
+            {#<div class="list-group">
+
+                {% for tool in project.tools %}
+
+                    <a href="{{ url("diyoh_project_showtool",{'id':tool.id}) }}" class="list-group-item"><p>{{ tool.name }}</p></a>
+
+                {% endfor %}
+
+            </div>#}
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Image</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tool in project.tools %}
+                    <tr>
+                        <td><a href="{{ url("diyoh_project_showtool",{'id':tool.id}) }}">{{ tool.name }}</a></td>
+                        <td>Q</td>
+                        <td>IMG</td>
+                        <td>COMMENT</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+
+{% endblock %}

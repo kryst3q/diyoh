@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:lc="http://www.librecad.org" xmlns:xlink="http://www.w3.org/1999/xlink" width="115mm" height="115mm" viewBox="0 0 115 115">
+    <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+        <path d="M15,115 L115,115 L115,15 L15,15 L15,115 Z "/>
+        <circle cx="25" cy="105" r="5"/>
+        <circle cx="105" cy="105" r="5"/>
+        <circle cx="105" cy="25" r="5"/>
+        <circle cx="25" cy="25" r="5"/>
+    </g>
+</svg>

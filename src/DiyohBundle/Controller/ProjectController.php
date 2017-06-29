@@ -10,6 +10,8 @@ use DiyohBundle\Entity\Message;
 use DiyohBundle\Entity\Comment;
 use DiyohBundle\Entity\Discussion;
 use DiyohBundle\Entity\Voice;
+use DiyohBundle\Entity\Tool;
+use DiyohBundle\Entity\Material;
 
 class ProjectController extends Controller
 {
@@ -196,6 +198,33 @@ class ProjectController extends Controller
     }
     
     /**
+     * @Route("/project/{id}/tools")
+     */
+    public function showProjectToolsAction($id) {
+        
+        $em = $this->getDoctrine()->getManager();
+        $project = $em->getRepository("DiyohBundle:Project")->findById($id);
+        
+        return $this->render('DiyohBundle:Project:show_project_tools.html.twig', array(
+            'project' => $project[0]
+        ));
+    }
+    
+    /**
+     * @Route("/project/{id}/materials")
+     */
+    public function showProjectMaterialsAction($id) {
+        
+        $em = $this->getDoctrine()->getManager();
+        $project = $em->getRepository("DiyohBundle:Project")->findById($id);
+        
+        return $this->render('DiyohBundle:Project:show_project_materials.html.twig', array(
+            'project' => $project[0]
+        ));
+        
+    }
+    
+    /**
      * @Route("/project/{id}/comments")
      */
     public function showProjectCommentsAction($id, Request $request) {
@@ -374,6 +403,15 @@ class ProjectController extends Controller
         }
         
         return $this->render('DiyohBundle:Project:show_other_user_info.html.twig', array('user' => $user[0], 'form' => $form->createView()));
+        
+    }
+    
+    /**
+     * @Route("/development_tree")
+     */
+    public function showProjectsTree() {
+        
+        return $this->render('DiyohBundle:Project:show_development_tree.html.twig');
         
     }
 

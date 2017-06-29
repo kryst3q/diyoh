@@ -15,8 +15,8 @@ class __TwigTemplate_9e2b94d5bc4738856de8f33d0bba4b1bdbcf8d3fc6e756671e8bed2105b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4->enter($__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:messagebar.html.twig"));
+        $__internal_850b0a4114a8a22ae5d67069cb61f986d1aa5fb6d63d8862d8602f2dcae90832 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_850b0a4114a8a22ae5d67069cb61f986d1aa5fb6d63d8862d8602f2dcae90832->enter($__internal_850b0a4114a8a22ae5d67069cb61f986d1aa5fb6d63d8862d8602f2dcae90832_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Account:messagebar.html.twig"));
 
         // line 1
         echo "<div class=\"sidebar-nav col-md-2\">
@@ -37,7 +37,7 @@ class __TwigTemplate_9e2b94d5bc4738856de8f33d0bba4b1bdbcf8d3fc6e756671e8bed2105b
 </div>
 ";
         
-        $__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4->leave($__internal_1b5e4149689391434a0798545c486a6be1e0c7bdffbf37d3c8c4de293d7f0ff4_prof);
+        $__internal_850b0a4114a8a22ae5d67069cb61f986d1aa5fb6d63d8862d8602f2dcae90832->leave($__internal_850b0a4114a8a22ae5d67069cb61f986d1aa5fb6d63d8862d8602f2dcae90832_prof);
 
     }
 

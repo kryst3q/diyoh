@@ -22,32 +22,32 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3f27dcc4df9c178f8760bf2990191702456a2451b3137e636f25c720c813a787 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3f27dcc4df9c178f8760bf2990191702456a2451b3137e636f25c720c813a787->enter($__internal_3f27dcc4df9c178f8760bf2990191702456a2451b3137e636f25c720c813a787_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_project.html.twig"));
+        $__internal_1073564be3fa3ed2087ee28f0eb5fc08b2ca33f5d0c9c898596139bc5c6e997a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1073564be3fa3ed2087ee28f0eb5fc08b2ca33f5d0c9c898596139bc5c6e997a->enter($__internal_1073564be3fa3ed2087ee28f0eb5fc08b2ca33f5d0c9c898596139bc5c6e997a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiyohBundle:Project:show_project.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3f27dcc4df9c178f8760bf2990191702456a2451b3137e636f25c720c813a787->leave($__internal_3f27dcc4df9c178f8760bf2990191702456a2451b3137e636f25c720c813a787_prof);
+        $__internal_1073564be3fa3ed2087ee28f0eb5fc08b2ca33f5d0c9c898596139bc5c6e997a->leave($__internal_1073564be3fa3ed2087ee28f0eb5fc08b2ca33f5d0c9c898596139bc5c6e997a_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_08b1d96602cf4dfce0bb975536f1985431843c30f5bf2e98e026bd0b43c2fbb2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_08b1d96602cf4dfce0bb975536f1985431843c30f5bf2e98e026bd0b43c2fbb2->enter($__internal_08b1d96602cf4dfce0bb975536f1985431843c30f5bf2e98e026bd0b43c2fbb2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_8439c167b8e5720b13bd032cf39826017e9346468c38fc5d7ab18c7129eaa27f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8439c167b8e5720b13bd032cf39826017e9346468c38fc5d7ab18c7129eaa27f->enter($__internal_8439c167b8e5720b13bd032cf39826017e9346468c38fc5d7ab18c7129eaa27f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "DiyohBundle:Project:showProject";
         
-        $__internal_08b1d96602cf4dfce0bb975536f1985431843c30f5bf2e98e026bd0b43c2fbb2->leave($__internal_08b1d96602cf4dfce0bb975536f1985431843c30f5bf2e98e026bd0b43c2fbb2_prof);
+        $__internal_8439c167b8e5720b13bd032cf39826017e9346468c38fc5d7ab18c7129eaa27f->leave($__internal_8439c167b8e5720b13bd032cf39826017e9346468c38fc5d7ab18c7129eaa27f_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2e0bed92cbc2f3df44e66d54c71cdc65839900f5ef1757840d73994995090732 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2e0bed92cbc2f3df44e66d54c71cdc65839900f5ef1757840d73994995090732->enter($__internal_2e0bed92cbc2f3df44e66d54c71cdc65839900f5ef1757840d73994995090732_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_515180c25bcd40c9a7cf7fd5ec02de043609f07a58fce35aac6efbf910de3d03 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_515180c25bcd40c9a7cf7fd5ec02de043609f07a58fce35aac6efbf910de3d03->enter($__internal_515180c25bcd40c9a7cf7fd5ec02de043609f07a58fce35aac6efbf910de3d03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -91,12 +91,9 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
         }
         // line 24
         echo "
-        <p>";
-        // line 25
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "id", array()), "html", null, true);
-        echo "</p>
-        <p>";
+        ";
         // line 26
+        echo "        <p>";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "name", array()), "html", null, true);
         echo "</p>
         <a href=\"";
@@ -143,80 +140,10 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
 
         </div>
 
-        <div class=\"row\">
-
-            <div class=\"page-header\">
-
-                <h4>Tools</h4>
-
-            </div>
-
-            <div class=\"list-group\">
-
-                ";
-        // line 58
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "tools", array()));
-        foreach ($context['_seq'] as $context["_key"] => $context["tool"]) {
-            // line 59
-            echo "
-                    <a href=\"";
-            // line 60
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showtool", array("id" => $this->getAttribute($context["tool"], "id", array()))), "html", null, true);
-            echo "\" class=\"list-group-item\"><p>";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["tool"], "name", array()), "html", null, true);
-            echo "</p></a>
-
-                ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tool'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
-        echo "
-            </div>
-
-        </div>
-
-        <div class=\"row\">
-
-            <div class=\"page-header\">
-
-                <h4>Materials</h4>
-
-            </div>
-
-            <div class=\"list-group\">
-
-                ";
-        // line 78
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "materials", array()));
-        foreach ($context['_seq'] as $context["_key"] => $context["material"]) {
-            // line 79
-            echo "
-                    <a href=\"";
-            // line 80
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getUrl("diyoh_project_showmaterial", array("id" => $this->getAttribute($context["material"], "id", array()))), "html", null, true);
-            echo "\" class=\"list-group-item\"><p>";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["material"], "name", array()), "html", null, true);
-            echo "</p></a>
-
-                ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['material'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 83
-        echo "
-            </div>
-
-        </div>
-
         ";
-        // line 88
+        // line 48
         if (($this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "imagesPaths", array()) != null)) {
-            // line 89
+            // line 49
             echo "
             <div class=\"row\">
 
@@ -225,16 +152,16 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
                 </div>
 
                 ";
-            // line 96
+            // line 56
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["project"] ?? $this->getContext($context, "project")), "imagesPaths", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["imagePath"]) {
-                // line 97
+                // line 57
                 echo "
                     <div class=\"col-xs-6 col-md-3\">
                         <a href=\"#\" class=\"thumbnail\">
                             <img src=\"";
-                // line 100
+                // line 60
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("images/" . $context["imagePath"])), "html", null, true);
                 echo "\">
                         </a>
@@ -246,19 +173,24 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['imagePath'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 106
+            // line 66
             echo "
             </div>
 
         ";
         }
-        // line 110
-        echo "
+        // line 70
+        echo "        
+        <img src=\"";
+        // line 71
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/test1.svg"), "html", null, true);
+        echo "\">
+
     </div>
 
 ";
         
-        $__internal_2e0bed92cbc2f3df44e66d54c71cdc65839900f5ef1757840d73994995090732->leave($__internal_2e0bed92cbc2f3df44e66d54c71cdc65839900f5ef1757840d73994995090732_prof);
+        $__internal_515180c25bcd40c9a7cf7fd5ec02de043609f07a58fce35aac6efbf910de3d03->leave($__internal_515180c25bcd40c9a7cf7fd5ec02de043609f07a58fce35aac6efbf910de3d03_prof);
 
     }
 
@@ -274,7 +206,7 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
 
     public function getDebugInfo()
     {
-        return array (  256 => 110,  250 => 106,  238 => 100,  233 => 97,  229 => 96,  220 => 89,  218 => 88,  211 => 83,  200 => 80,  197 => 79,  193 => 78,  176 => 63,  165 => 60,  162 => 59,  158 => 58,  142 => 44,  131 => 41,  128 => 40,  124 => 39,  110 => 28,  104 => 27,  100 => 26,  96 => 25,  93 => 24,  89 => 22,  83 => 19,  80 => 18,  78 => 17,  73 => 15,  70 => 14,  68 => 13,  65 => 12,  63 => 11,  60 => 10,  58 => 9,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  186 => 71,  183 => 70,  177 => 66,  165 => 60,  160 => 57,  156 => 56,  147 => 49,  145 => 48,  139 => 44,  128 => 41,  125 => 40,  121 => 39,  107 => 28,  101 => 27,  96 => 26,  93 => 24,  89 => 22,  83 => 19,  80 => 18,  78 => 17,  73 => 15,  70 => 14,  68 => 13,  65 => 12,  63 => 11,  60 => 10,  58 => 9,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -311,7 +243,7 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
 
         {% endif %}
 
-        <p>{{ project.id }}</p>
+        {#<p>{{ project.id }}</p>#}
         <p>{{ project.name }}</p>
         <a href=\"{{ url(\"diyoh_project_showinfoaboutotheruser\",{'id':project.authorId.id}) }}\"><p>{{ project.authorId }}</p></a>
         <p>{{ project.description }}</p>
@@ -330,46 +262,6 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
                     <a href=\"{{ url(\"diyoh_project_showtaglinks\",{'id':tag.id}) }}\"><span class=\"badge\">{{ tag.name }}</span>
 
                     {% endfor %}
-            </div>
-
-        </div>
-
-        <div class=\"row\">
-
-            <div class=\"page-header\">
-
-                <h4>Tools</h4>
-
-            </div>
-
-            <div class=\"list-group\">
-
-                {% for tool in project.tools %}
-
-                    <a href=\"{{ url(\"diyoh_project_showtool\",{'id':tool.id}) }}\" class=\"list-group-item\"><p>{{ tool.name }}</p></a>
-
-                {% endfor %}
-
-            </div>
-
-        </div>
-
-        <div class=\"row\">
-
-            <div class=\"page-header\">
-
-                <h4>Materials</h4>
-
-            </div>
-
-            <div class=\"list-group\">
-
-                {% for material in project.materials %}
-
-                    <a href=\"{{ url(\"diyoh_project_showmaterial\",{'id':material.id}) }}\" class=\"list-group-item\"><p>{{ material.name }}</p></a>
-
-                {% endfor %}
-
             </div>
 
         </div>
@@ -396,6 +288,8 @@ class __TwigTemplate_7f3335e58bd40033fc02fb8960c47bfed7ae288f0232aca8c09c9890f2b
             </div>
 
         {% endif %}
+        
+        <img src=\"{{ asset('images/test1.svg') }}\">
 
     </div>
 

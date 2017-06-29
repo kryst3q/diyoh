@@ -22,7 +22,7 @@
 
         {% endif %}
 
-        <p>{{ project.id }}</p>
+        {#<p>{{ project.id }}</p>#}
         <p>{{ project.name }}</p>
         <a href="{{ url("diyoh_project_showinfoaboutotheruser",{'id':project.authorId.id}) }}"><p>{{ project.authorId }}</p></a>
         <p>{{ project.description }}</p>
@@ -41,46 +41,6 @@
                     <a href="{{ url("diyoh_project_showtaglinks",{'id':tag.id}) }}"><span class="badge">{{ tag.name }}</span>
 
                     {% endfor %}
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="page-header">
-
-                <h4>Tools</h4>
-
-            </div>
-
-            <div class="list-group">
-
-                {% for tool in project.tools %}
-
-                    <a href="{{ url("diyoh_project_showtool",{'id':tool.id}) }}" class="list-group-item"><p>{{ tool.name }}</p></a>
-
-                {% endfor %}
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="page-header">
-
-                <h4>Materials</h4>
-
-            </div>
-
-            <div class="list-group">
-
-                {% for material in project.materials %}
-
-                    <a href="{{ url("diyoh_project_showmaterial",{'id':material.id}) }}" class="list-group-item"><p>{{ material.name }}</p></a>
-
-                {% endfor %}
-
             </div>
 
         </div>
@@ -107,6 +67,8 @@
             </div>
 
         {% endif %}
+        
+        <img src="{{ asset('images/test1.svg') }}">
 
     </div>
 

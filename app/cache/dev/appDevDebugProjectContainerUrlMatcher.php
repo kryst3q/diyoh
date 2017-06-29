@@ -273,6 +273,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/project')) {
+            // diyoh_project_showprojecttools
+            if (preg_match('#^/project/(?P<id>[^/]++)/tools$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showprojecttools')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showProjectToolsAction',));
+            }
+
+            // diyoh_project_showprojectmaterials
+            if (preg_match('#^/project/(?P<id>[^/]++)/materials$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showprojectmaterials')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showProjectMaterialsAction',));
+            }
+
             // diyoh_project_showprojectcomments
             if (preg_match('#^/project/(?P<id>[^/]++)/comments$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showprojectcomments')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showProjectCommentsAction',));
@@ -300,6 +310,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'diyoh_project_showinfoaboutotheruser')), array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showInfoAboutOtherUserAction',));
         }
         not_diyoh_project_showinfoaboutotheruser:
+
+        // diyoh_project_showprojectstree
+        if ($pathinfo === '/development_tree') {
+            return array (  '_controller' => 'DiyohBundle\\Controller\\ProjectController::showProjectsTree',  '_route' => 'diyoh_project_showprojectstree',);
+        }
 
         if (0 === strpos($pathinfo, '/log')) {
             if (0 === strpos($pathinfo, '/login')) {

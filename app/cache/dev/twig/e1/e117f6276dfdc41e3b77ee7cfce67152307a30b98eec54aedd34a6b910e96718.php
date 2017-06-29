@@ -15,8 +15,8 @@ class __TwigTemplate_747ea7a6c7bc43f19f73a6397f94c9fadaef4cc619ff96dac460fe2a6c2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c85725bba03dc7246f39ec0bb0ee19f50a6d5151df0a5d3dd820268369ba6ba8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c85725bba03dc7246f39ec0bb0ee19f50a6d5151df0a5d3dd820268369ba6ba8->enter($__internal_c85725bba03dc7246f39ec0bb0ee19f50a6d5151df0a5d3dd820268369ba6ba8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "css/style.css"));
+        $__internal_8ee3684ebdac454f0329ae217d28a1e3d178b39923379a25beaac5c77af2d087 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8ee3684ebdac454f0329ae217d28a1e3d178b39923379a25beaac5c77af2d087->enter($__internal_8ee3684ebdac454f0329ae217d28a1e3d178b39923379a25beaac5c77af2d087_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "css/style.css"));
 
         // line 1
         echo ".project-table {
@@ -26,7 +26,7 @@ class __TwigTemplate_747ea7a6c7bc43f19f73a6397f94c9fadaef4cc619ff96dac460fe2a6c2
 
 ";
         
-        $__internal_c85725bba03dc7246f39ec0bb0ee19f50a6d5151df0a5d3dd820268369ba6ba8->leave($__internal_c85725bba03dc7246f39ec0bb0ee19f50a6d5151df0a5d3dd820268369ba6ba8_prof);
+        $__internal_8ee3684ebdac454f0329ae217d28a1e3d178b39923379a25beaac5c77af2d087->leave($__internal_8ee3684ebdac454f0329ae217d28a1e3d178b39923379a25beaac5c77af2d087_prof);
 
     }
 
